@@ -49,10 +49,26 @@
               "name": "Allen",
               "phno": "469.501.5219"
             }
+          },
+          "5ee7ff0a-578f-4144-91da-537e6366f9e7": {
+            "type": "select",
+            "settings": {
+              "name": "McKinney",
+              "phno": "972.454.4759"
+            }
+          },
+          "1ac45c94-dd73-4172-9447-34f0a4aef0e1": {
+            "type": "select",
+            "settings": {
+              "name": "Prosper",
+              "phno": "214.396.9800"
+            }
           }
         },
         "block_order": [
-          "f2ce35fe-d8b4-4c37-ab0e-9c97cc4a5f62"
+          "f2ce35fe-d8b4-4c37-ab0e-9c97cc4a5f62",
+          "5ee7ff0a-578f-4144-91da-537e6366f9e7",
+          "1ac45c94-dd73-4172-9447-34f0a4aef0e1"
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/logo.png",
