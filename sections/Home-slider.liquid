@@ -1,0 +1,62 @@
+<div class="carousel-inner">
+    {% for block in section.blocks %}
+  
+      <div class="carousel-item {% if forloop.first %}active {%endif%} {% if link.active %}active{% endif %} "> <img src="{{ block.settings.slider-image | img_url:'master' }}" class="d-block w-100 lazyload" alt=""> </div>
+  
+      <div class="mask">
+        <h1>{{ block.settings.heading-text }}</h1> 
+        <a href="{{ block.settings.link }}" class="btn gradient01 explore"> {{ block.settings.linktext }} </a> 
+      </div>
+  
+    {% endfor %}
+  </div>
+  
+
+  {% schema %}
+  {
+    "name": "Home Slider",
+    "blocks":[
+        {
+              "name":"Slider",
+              "type":"select",
+              "settings":[
+                  {
+                      "type":"image_picker",
+                      "id":"slider-image",
+                      "label":"Image"
+                  },
+                  {
+                    "id": "heading-text",
+                    "type": "text",
+                    "label": "Heading"
+                  },
+                  {
+                    "id": "preheading-text",
+                    "type": "text",
+                    "label": "Pre Heading"
+                  },
+                  {
+                    "id": "linktext",
+                    "type": "text",
+                    "label": "Button label"
+                  },
+                  {
+                    "id": "link",
+                    "type": "url",
+                    "label": "Button link"
+                  }
+                 
+  
+              ]
+        }
+    ],
+    "presets": [
+          {
+              "name": "Banner",
+              "category": "custom"
+          }
+        ]
+    
+  }
+    
+  {% endschema %}

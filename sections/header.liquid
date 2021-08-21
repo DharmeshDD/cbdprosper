@@ -55,27 +55,32 @@
            </div>
 
            <div class="search-sec">
-              <div class="search-modal modal__content" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
-                <div class="search-modal__content" tabindex="-1">
-                  <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
-                    <div class="field">
-                      <input class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.search' | t }}">
-                      <label class="field__label" for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
-                      <input type="hidden" name="options[prefix]" value="last">
-                      <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-                        <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                          <use href="#icon-search">
-                        </svg>
-                      </button>
-                    </div>
-                  </form>
-                  <button type="button" class="modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
-                    <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-                      <use href="#icon-close">
+            <div class="search float-right">
+              <div class="search-icon">
+                  <a class="search-icon-link" href="javascript:void(0)">
+                      <img src="/asset/search.png" class="searchdefault" alt="Logo" >
+                      <img src="/asset/search-active.png" class="search_active_icon" alt="Logo" >
+                  </a>
+              </div>
+              <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+                <div class="field">
+                  <input class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.search' | t }}">
+                  <label class="field__label" for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
+                  <input type="hidden" name="options[prefix]" value="last">
+                  <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                    <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
+                      <use href="#icon-search">
                     </svg>
                   </button>
                 </div>
-              </div>
+              </form>
+              <button type="button" class="modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
+                <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
+                  <use href="#icon-close">
+                </svg>
+              </button>
+          </div>
+      
             </div>
          
         </nav>
@@ -84,54 +89,54 @@
   </div>
 </header>
 {% schema %}
-{
-"name": "Header",
-"settings": [
-{
-"type": "header",
-"content": "Menu"
-},
-{
-"type": "image_picker",
-"id": "logo",
-"label": "Logo"
-},
-{
-"type": "header",
-"content": "Menu"
-},
-{
-"type": "link_list",
-"id": "menu_left",
-"label": "Left Menu"
-},
-{
-"type": "link_list",
-"id": "menu_right",
-"label": "Right Menu"
-},
-{
-  "type": "header",
-  "content": "Contact Number"
-}
-],
-"blocks":[
-{
-      "name":"Contact Number",
-      "type":"select",
-      "settings":[
-          {
-            "id": "name",
-            "type": "text",
-            "label": "Name"
-          },
-          {
-            "id": "phno",
-            "type": "text",
-            "label": "Phno"
-          }
-      ]
-}
-]
+        {
+        "name": "Header",
+        "settings": [
+        {
+        "type": "header",
+        "content": "Menu"
+        },
+        {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+        },
+        {
+        "type": "header",
+        "content": "Menu"
+        },
+        {
+        "type": "link_list",
+        "id": "menu_left",
+        "label": "Left Menu"
+        },
+        {
+        "type": "link_list",
+        "id": "menu_right",
+        "label": "Right Menu"
+        },
+        {
+          "type": "header",
+          "content": "Contact Number"
+        }
+        ],
+        "blocks":[
+        {
+              "name":"Contact Number",
+              "type":"select",
+              "settings":[
+                  {
+                    "id": "name",
+                    "type": "text",
+                    "label": "Name"
+                  },
+                  {
+                    "id": "phno",
+                    "type": "text",
+                    "label": "Phno"
+                  }
+              ]
+        }
+        ]
 }
 {% endschema %}
