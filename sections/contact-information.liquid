@@ -40,12 +40,18 @@
             <div class="col-lg-6">
                 {% if block.settings.phno != blank %}
                   <div class="phn">
+                    <a href="tel:{{ block.settings.phno }}">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
                     <span>{{ block.settings.phno }}</span>
+                  </a>
                   </div>
                 {% endif %}
                 {% if block.settings.gmail != blank %}
                   <div class="email-detail">
+                    <a href="mailto:{{ block.settings.gmail }}">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
                     <span>{{ block.settings.gmail }}</span>
+                  </a>
                   </div>
                 {% endif %}
             </div>
