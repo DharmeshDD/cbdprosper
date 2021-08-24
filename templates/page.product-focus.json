@@ -1,0 +1,18 @@
+{
+    "sections": {
+      "image_banner": {
+        "type": "image-banner"
+      },
+      "general_content": {
+          "type": "general-content"
+      },
+      "our_service": {
+        "type": "ourservices"
+    }
+    },
+    "order": [
+      "image_banner",
+      "general_content",
+      "our_service"
+    ]
+  }

@@ -1,0 +1,116 @@
+<div class="contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="heading">
+                    {% if section.settings.heading != blank %}
+                        <h1>{{ section.settings.heading }}</h1>
+                      {% endif %}
+                </div>
+            <div class="col-lg-6">
+                {% if section.settings.address != blank %}
+                  <div class="address-detail">
+                    <p>{{ section.settings.address }}</p>
+                  </div>
+                {% endif %}
+            </div>
+            <div class="col-lg-6">
+                {% if section.settings.phno != blank %}
+                  <div class="phn">
+                    <span>{{ section.settings.phno }}</span>
+                  </div>
+                {% endif %}
+                {% if section.settings.gmail != blank %}
+                  <div class="email-detail">
+                    <span>{{ section.settings.gmail }}</span>
+                  </div>
+                {% endif %}
+            </div>
+  
+            {% if section.settings.button_label != blank %}
+            <div class="btn-direction"> 
+              <a class="btn btn-primary" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+            </div>
+            {% endif %}
+            <hr>
+  
+            <div class="heading">
+              {% if section.settings.other-heading != blank %}
+                <h1>{{ section.settings.other-heading }}</h1>
+              {% endif %}
+            </div>
+                  <div class="content">
+                    {% if section.settings.other-text != blank %}
+                      <p>{{ section.settings.other-text }}</p>
+                    {% endif %}
+            </div>
+            </div>
+            <div class="col-lg-6">
+            {% if section.settings.map != blank %}
+                  <iframe src="{{ section.settings.map }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            {% endif %}
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.074127629405!2d70.77439391495427!3d22.27518168533663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca38afabb183%3A0x9af3d90de1e458bb!2sNana%20Mava%20Rd%2C%20Rajkot%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1629793556443!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+            </div>
+  
+        </div>
+  
+  
+    </div>
+  </div>
+  
+  
+  
+  {% schema %}
+  {
+    "name": "Contact us",
+    "settings": [
+        {
+          "id": "heading",
+          "type": "text",
+          "label": "Heading"
+        },
+        {
+          "id": "address",
+          "type": "html",
+          "label": "Address"
+        },
+        {
+          "id": "phno",
+          "type": "text",
+          "label": "Address"
+        },
+        {
+          "id": "gmail",
+          "type": "text",
+          "label": "Gmail"
+        },
+        {
+            "id":"button_label",
+            "type":"text",
+            "label":"Button label"
+          },
+          {
+            "id":"button_link",
+            "type":"url",
+            "label":"Button link"
+          },
+          {
+          "id": "other-heading",
+          "type": "text",
+          "label": "Heading",
+          "default":"Office Hours"
+        },
+        {
+          "id": "other-text",
+          "type": "html",
+          "label": "Hours"
+        },
+        {
+            "id":"map",
+            "type":"text",
+            "label":"Map Address Link"
+        }
+    ]
+    
+  }
+  {% endschema %}
