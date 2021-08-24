@@ -1,0 +1,91 @@
+<div class="cbd-use"  style="background-image: url('{{ section.settings.bg-img | img_url:'master' }}')">
+<div class="container">
+<div class="heading">
+    {% if section.settings.heading != blank %}
+      <h1>{{ section.settings.heading }}</h1>
+    {% endif %}
+  
+    {% if section.settings.text != blank %}
+      <p>{{ section.settings.text }}</p>
+    {% endif %}
+</div>
+<div class="use-content">
+    {% if section.blocks != blank %}
+      <div class="row">
+        {% for block in section.blocks %}
+        <div class="col-lg-2">
+  
+          {% if block.settings.image != blank %}
+            <img src="{{ block.settings.image | img_url:'master' }}" alt="{{ block.settings.heading-text }}">
+          {% endif %}
+  
+          {% if block.settings.heading-text != blank %}
+            <h1>{{ block.settings.heading-text }}</h1>
+          {% endif %}
+  
+          {% if block.settings.desc-text != blank %}
+            <p>{{ block.settings.desc-text }}</p>
+          {% endif %}
+  
+        </div>
+        {% endfor %} 
+      </div>
+    {% endif %}
+</div>
+  </div>
+</div>
+  
+  
+  {% schema %}
+  {
+    "name": "CBD Use",
+    "settings": [
+        {
+          "id": "bg-img",
+          "type": "image_picker",
+          "label": "Image"
+        },
+        {
+          "id": "heading",
+          "type": "text",
+          "label": "Heading"
+        },
+        {
+          "id": "text",
+          "type": "html",
+          "label": "Text"
+        }
+    ],
+    "blocks":[
+        {
+              "name":"CBD blocks",
+              "type":"select",
+              "settings":[
+                  {
+                      "type":"image_picker",
+                      "id":"image",
+                      "label":"Images"
+                  },
+                  {
+                    "id": "heading-text",
+                    "type": "text",
+                    "label": "Heading"
+                  },
+                  {
+                    "id": "desc-text",
+                    "type": "html",
+                    "label": "Text"
+                  }
+              ]
+        }
+    ],
+    "presets": [
+          {
+              "name": "Use CBD",
+              "category": "Use CBD"
+          }
+        ]
+    
+  }
+    
+  {% endschema %}

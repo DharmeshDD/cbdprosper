@@ -1,0 +1,19 @@
+{
+    "sections": {
+      "image_banner": {
+        "type": "image-banner"
+      },
+      "image_with_text": {
+        "type": "image-with-text"
+      },
+      "general_content": {
+        "type": "general-content"
+      }
+    },
+    "order": [
+      "image_banner",
+      "image_with_text",
+      "general_content"
+    ]
+  }
+  

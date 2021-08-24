@@ -1,0 +1,52 @@
+<div class="headlines">
+	<div class="container">
+		<div class="row" style="background-image: url('{{ section.settings.bg_image | img_url:'master' }}')">
+			<div class="col-lg-12">
+				<div class="heading">
+					{% if section.settings.heading != blank %}
+						<h1>{{ section.settings.heading }}</h1>
+					{% endif %}
+				</div>
+				<div>
+					{% if section.settings.subheading != blank %}
+						<h1>{{ section.settings.subheading }}</h1>
+					{% endif %}
+				</div>
+				<div>
+					{% if section.settings.text != blank %}
+						<p>{{ section.settings.text }}</p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% schema %}
+{
+ "name": "General Content",
+ "settings": [
+     {
+       "id": "bg_image",
+       "type": "image_picker",
+       "label": "Image"
+     },
+     {
+       "id": "heading",
+       "type": "text",
+       "label": "Heading"
+     },
+     {
+       "id": "subheading",
+       "type": "text",
+       "label": "Subheading"
+     },
+     {
+       "id": "text",
+       "type": "html",
+       "label": "Text"
+     }
+ ]
+}
+{% endschema %}

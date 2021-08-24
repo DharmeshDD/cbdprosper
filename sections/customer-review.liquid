@@ -1,0 +1,151 @@
+<div class="customer-review" style="background-image: url('{{ section.settings.bg-img | img_url:'master' }}')">
+  <div class="container" >
+      <div class="row">
+          <div class="col-lg-7">
+        {% if section.blocks != blank %}
+        <div class="owl-carousel owl-theme" id="customer-review">
+          {% for block in section.blocks %}
+          <div class="item">
+              {% if block.settings.rating == '1' %}
+                <img src="/assets/1star.png" alt="star-icon">
+  
+              {% elsif block.settings.rating == '2' %}
+              <img src="/assets/2star.png" alt="star-icon">
+  
+              {% elsif block.settings.rating == '3' %}
+              <img src="/assets/3star.png" alt="star-icon">
+  
+              {% elsif block.settings.rating == '4' %}
+              <img src="/assets/4star.png" alt="star-icon">
+  
+              {% elsif block.settings.rating == '5' %}
+              <img src="/assets/5star.png" alt="star-icon">
+  
+              {% else %}
+                
+              {% endif %}
+    
+              {% if block.settings.desc-text != blank %}
+                <p>{{ block.settings.desc-text }}</p>
+              {% endif %}
+    
+              <div class="author-info">
+    
+                {% if block.settings.author-name != blank %}
+                  <h3>{{ block.settings.author-name }}</h3>
+                {% endif %}
+                 
+                {% if block.settings.author-post != blank %}
+                  <p>{{ block.settings.author-post }}<p>
+                {% endif %}
+    
+              </div>
+            </div>
+          {% endfor %} 
+          </div>
+      </div>
+        {% endif %}
+        
+        <div class="col-lg-5">
+            <div class="heading">
+          {% if section.settings.heading != blank %}
+            <h2>{{ section.settings.heading }}</h2>
+          {% endif %}
+    
+          {% if section.settings.text != blank %}
+            <h3>{{ section.settings.text }}</h3>
+          {% endif %}
+      </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+    
+    
+    {% schema %}
+    {
+      "name": "Customer Review",
+      "settings": [
+          {
+            "id": "bg-img",
+            "type": "image_picker",
+            "label": "Image"
+          },
+          {
+            "id": "heading",
+            "type": "text",
+            "label": "Heading"
+          },
+          {
+            "id": "text",
+            "type": "html",
+            "label": "Text"
+          }
+      ],
+      "blocks":[
+          {
+                "name":"CBD slides",
+                "type":"select",
+                "settings":[
+                    {
+                      "type": "select",
+                      "options": [
+                        {
+                          "group": "rating",
+                          "value": "1",
+                          "label": "1"
+                        },
+                        {
+                          "group": "rating",
+                          "value": "2",
+                          "label": "2"
+                        },
+                        {
+                          "group": "rating",
+                          "value": "3",
+                          "label": "3"
+                        },
+                        {
+                          "group": "rating",
+                          "value": "4",
+                          "label": "4"
+                        },
+                        {
+                          "group": "rating",
+                          "value": "5",
+                          "label": "5"
+                        }
+                      ],
+                      "id": "rating",
+                      "default": "1",
+                      "label":"Ratings"
+                    },
+                    {
+                      "id": "desc-text",
+                      "type": "html",
+                      "label": "Text"
+                    },
+                    {
+                      "id": "author-name",
+                      "type": "text",
+                      "label": "Author name"
+                    },
+                    {
+                      "id": "author-post",
+                      "type": "text",
+                      "label": "Author post"
+                    }
+                ]
+          }
+      ],
+      "presets": [
+            {
+                "name": "Customer Review",
+                "category": "Custom"
+            }
+          ]
+      
+    }
+      
+    {% endschema %}

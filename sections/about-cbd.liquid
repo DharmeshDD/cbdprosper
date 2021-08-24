@@ -1,0 +1,62 @@
+<div class="about-cbd" style="background-image: url('{{ section.settings.bg-img | img_url:'master' }}');background-size: cover;">
+<div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+          <div class="heading">
+                {% if section.settings.heading != blank %}
+                    <h1>{{ section.settings.heading }}</h1>  
+                {% endif %}
+            
+                {% if section.settings.sub-heading != blank %}
+                    <h4> {{ section.settings.sub-heading }}</h4>
+                {% endif %}
+            </div>
+            <div class ="inner-text">
+                
+                {% if section.settings.text != blank %}
+                {{ section.settings.text }}
+                {% endif %}
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+  
+  
+  {% schema %}
+  {
+    "name": "About CBD",
+    "settings": [
+        {
+          "id": "bg-img",
+          "type": "image_picker",
+          "label": "Background Image"
+        },
+        {
+          "id": "heading",
+          "type": "text",
+          "label": "Heading"
+        },
+        {
+          "id": "sub-heading",
+          "type": "text",
+          "label": "Sub Heading "
+         
+        },
+        {
+          "id": "text",
+          "type": "html",
+          "label": "Content"
+        }
+    ],
+    "presets": [
+      {
+          "name": "About CBD",
+          "category": "about"
+      }
+    ]
+  }
+    
+  {% endschema %}

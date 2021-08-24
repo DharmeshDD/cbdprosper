@@ -1,0 +1,74 @@
+<div class="how-cbd-work" style="background-image: url('{{ section.settings.bg-img | img_url:'master' }}')">
+<div class="container">
+    <div class="row" >
+      <div class="col-lg-12 max-80">
+        {% if section.settings.heading != blank %}
+          <h1>{{ section.settings.heading }}</h1>
+        {% endif %}
+  
+        {% if section.settings.text != blank %}
+          <p>{{ section.settings.text }}</p>
+        {% endif %}
+  
+      </div> 
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+          {% if section.settings.left-text != blank %}
+            <p>{{ section.settings.left-text }}</p>
+          {% endif %}
+    
+        </div> 
+        <div class="col-lg-4">
+            {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image | img_url:'master' }}" alt="{{ section.settings.heading }}" class="img-fluid">
+            {% endif %}
+      
+          </div> 
+      </div>
+
+
+  </div>
+</div>
+  
+  {% schema %}
+  {
+    "name": "How CBD work",
+    "settings": [
+        {
+          "id": "bg-img",
+          "type": "image_picker",
+          "label": "Image"
+        },
+        {
+          "id": "heading",
+          "type": "text",
+          "label": "Heading"
+        },
+        {
+          "id": "text",
+          "type": "html",
+          "label": "Text"
+        },
+        {
+            "id": "left-text",
+            "type": "html",
+            "label": "Left Text"
+        },
+        {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+          {
+              "name": "How CBD work",
+              "category": "custom"
+          }
+        ]
+    
+  }
+    
+  {% endschema %}

@@ -1,62 +1,96 @@
-<div class="carousel-inner">
+<div class="Home-slider">
+  <div class="owl-carousel owl-theme" id="home-slider">
     {% for block in section.blocks %}
-  
-      <div class="carousel-item {% if forloop.first %}active {%endif%} {% if link.active %}active{% endif %} "> <img src="{{ block.settings.slider-image | img_url:'master' }}" class="d-block w-100 lazyload" alt=""> </div>
-  
-      <div class="mask">
-        <h1>{{ block.settings.heading-text }}</h1> 
-        <a href="{{ block.settings.link }}" class="btn gradient01 explore"> {{ block.settings.linktext }} </a> 
+
+      <div class="item" role="region" aria-label="{{ block.settings.heading-text }}" style="background-image: url('{{ block.settings.slider-image | img_url:'master' }}')">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="content align-{{ section.settings.layout }}">
+              {% if block.settings.heading-text != blank %}
+                <h1>{{ block.settings.heading-text }}</h1> 
+              {% endif %}
+
+              {% if block.settings.subheading-text != blank %}
+                <h1>{{ block.settings.subheading-text }}</h1> 
+              {% endif %}
+
+              {% if block.settings.linktext != blank %}
+                <a href="{{ block.settings.link }}" class="btn btn-green"> {{ block.settings.linktext }} </a> 
+              {% endif %}
+            </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-  
+
     {% endfor %}
   </div>
-  
+</div>
 
-  {% schema %}
-  {
-    "name": "Home Slider",
-    "blocks":[
+{% schema %}
+{
+  "name": "Slider",
+  "blocks":[
+      {
+            "name":"Slider Image",
+            "type":"select",
+            "settings":[
+                {
+                    "type":"image_picker",
+                    "id":"slider-image",
+                    "label":"Images"
+                },
+                {
+                  "type": "select",
+                  "id": "layout",
+                  "label":"Text alignment",
+                  "default": "right",
+                  "options": [
+                    {
+                      "value": "left",
+                      "label":"Left"
+                    },
+                    {
+                      "value": "right",
+                      "label": "Right"
+                    }
+                  ]
+                },
+                {
+                  "id": "heading-text",
+                  "type": "text",
+                  "label": "Heading"
+                },
+                {
+                  "id": "subheading-text",
+                  "type": "text",
+                  "label": "Sub Heading"
+                },
+                {
+                  "id": "linktext",
+                  "type": "text",
+                  "label": "Button label"
+                },
+                {
+                  "id": "link",
+                  "type": "url",
+                  "label": "Button link"
+                }
+               
+
+            ]
+      }
+  ],
+  "presets": [
         {
-              "name":"Slider",
-              "type":"select",
-              "settings":[
-                  {
-                      "type":"image_picker",
-                      "id":"slider-image",
-                      "label":"Image"
-                  },
-                  {
-                    "id": "heading-text",
-                    "type": "text",
-                    "label": "Heading"
-                  },
-                  {
-                    "id": "preheading-text",
-                    "type": "text",
-                    "label": "Pre Heading"
-                  },
-                  {
-                    "id": "linktext",
-                    "type": "text",
-                    "label": "Button label"
-                  },
-                  {
-                    "id": "link",
-                    "type": "url",
-                    "label": "Button link"
-                  }
-                 
-  
-              ]
+            "name": "Banner Slider",
+            "category": "custom"
         }
-    ],
-    "presets": [
-          {
-              "name": "Banner",
-              "category": "custom"
-          }
-        ]
-    
-  }
-    
-  {% endschema %}
+      ]
+  
+}
+  
+{% endschema %}

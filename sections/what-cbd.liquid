@@ -1,0 +1,48 @@
+<div class="what-cbd" style="background-image: url('{{ section.settings.image | img_url:'master' }}');">
+<div class="container">
+    <div class="row">
+       <div class="col-lg-6">
+           <div class="background-overlay">
+               <div class="heading">
+                {% if section.settings.heading != blank %}
+                <h2>{{ section.settings.heading }}</h2>
+                {% endif %}
+                </div>
+                <div class="content">
+                {% if section.settings.text != blank %}
+                {{ section.settings.text }}
+                {% endif %}
+            </div>
+            </div>
+       </div>
+    </div>
+ </div>
+</div>
+ {% schema %}
+ {
+ "name":"What is CBD",
+ "settings":[
+ {
+ "id":"image",
+ "type":"image_picker",
+ "label":"Background Image"
+ },
+ {
+ "id":"heading",
+ "type":"text",
+ "label":"Heading"
+ },
+ {
+ "id":"text",
+ "type":"html",
+ "label":"Text"
+ }
+ ],
+ "presets":[
+ {
+ "name":"What is CBD",
+ "category":"Custom"
+ }
+ ]
+ }
+ {% endschema %}
