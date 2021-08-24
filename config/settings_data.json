@@ -9,6 +9,8 @@
     "colors_background_2": "#F3F3F3",
     "type_header_font": "assistant_n4",
     "type_body_font": "assistant_n4",
+    "social_facebook_link": "https:\/\/facebook.com\/shopify",
+    "social_instagram_link": "https:\/\/facebook.com\/shopify",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -76,41 +78,264 @@
           "menu_right": "main-menu"
         }
       },
-      "footer": {
-        "type": "footer",
+      "footer-new": {
+        "type": "footer-new",
+        "settings": {
+          "contact_background_image": "shopify:\/\/shop_images\/bg_2.jpg",
+          "contactus_heading": "Find Us at 3 Convenient Locations",
+          "contact_info1": "<p><b>Allen<\/b><\/p>\n<p>975 SH 121\nSuite 175\nAllen, TX 75013<\/p>\n<p><a href=\"tel:254-203-9481\">254-203-9481<\/a><\/p>",
+          "contact_info2": "<p><b>McKinney<\/b><\/p>\n<p>6091 W. University Dr.\nSuite 106\nMcKinney, TX 75071<\/p>\n<p><a href=\"tel:972-454-4759\">972-454-4759<\/a><\/p>",
+          "contact_info3": "<p><b>Prosper<\/b><\/p>\n<p>2111 E. University Dr.\nSuite 40\nProsper, TX 75078<\/p>\n<p><a href=\"tel:254-237-9651\">254-237-9651<\/a><\/p>",
+          "button_label": "Contact Us",
+          "button_link": "#",
+          "disclaimer_background_image": "shopify:\/\/shop_images\/bg_3.jpg",
+          "disclaimer_heading": "FDA DISCLAIMER",
+          "disclaimer_text": "The statements made regarding these products have not been evaluated by the Food and Drug Administration. The efficacy of these products has not been confirmed by FDA-approved research. These products are not intended to diagnose, treat, cure or prevent any disease. All information presented here is not meant as a substitute for or alternative to information from health care practitioners. Please consult your health care professional about potential interactions or other possible complications before using any product. The Federal Food, Drug, and Cosmetic Act requires this notice.",
+          "facebook-link": "",
+          "instagram-link": "",
+          "google-link": "",
+          "footer-logo": "shopify:\/\/shop_images\/CBD_no_outline_2.jpg",
+          "heading": "Stay in the Loop",
+          "text": "Get the latest deals when you subscribe.",
+          "newsletter-title": "NEWSLETTER",
+          "show_newsletter": true
+        }
+      },
+      "1629788740d7c71a9e": {
+        "type": "Home-slider",
         "blocks": {
-          "footer-0": {
-            "type": "link_list",
+          "05a572ff-66c3-452a-aad0-23a9f2aa0d00": {
+            "type": "select",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "slider-image": "shopify:\/\/shop_images\/slider1.jpg",
+              "layout": "right",
+              "heading-text": "Live Your Best Life with Products from",
+              "subheading-text": "CBD Plus USA Allen, McKinney, Prosper",
+              "linktext": "Shop Now",
+              "link": "#"
             }
           },
-          "footer-1": {
-            "type": "text",
+          "5dce63dd-70c6-47d1-b23a-26435e70ca31": {
+            "type": "select",
             "settings": {
-              "heading": "Heading",
-              "subtext": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
+              "slider-image": "shopify:\/\/shop_images\/slider2.jpg",
+              "layout": "left",
+              "heading-text": "Meet Our",
+              "subheading-text": "CBD Plus USA Guides!",
+              "linktext": "Our Team",
+              "link": "#"
+            }
+          },
+          "055d68f0-a230-4cdb-90c9-5b2e4d9c57ff": {
+            "type": "select",
+            "settings": {
+              "slider-image": "shopify:\/\/shop_images\/slider3.jpg",
+              "layout": "right",
+              "heading-text": "Live Your Best Life!",
+              "subheading-text": "",
+              "linktext": "FAQs",
+              "link": "#"
             }
           }
         },
         "block_order": [
-          "footer-0",
-          "footer-1"
+          "05a572ff-66c3-452a-aad0-23a9f2aa0d00",
+          "5dce63dd-70c6-47d1-b23a-26435e70ca31",
+          "055d68f0-a230-4cdb-90c9-5b2e4d9c57ff"
         ],
         "settings": {
-          "color_scheme": "background-1",
-          "newsletter_enable": true,
-          "newsletter_heading": "Subscribe to our emails",
-          "show_social": false,
-          "enable_country_selector": true,
-          "enable_language_selector": true,
-          "payment_enable": true
+        }
+      },
+      "16297890975b8f1690": {
+        "type": "about-cbd",
+        "settings": {
+          "bg-img": "shopify:\/\/shop_images\/About-cbd.jpg",
+          "heading": "About CBD Plus USA",
+          "sub-heading": "in Allen, McKinney, and Prosper",
+          "text": "<p>Our knowledgeable and warm staff at CBD Plus USA in Allen, McKinney, and Prosper can guide you to alternative, over the counter, non-narcotic health solutions for symptoms associated with anxiety, pain, inflammation, diabetes, and more. If you seek to supplement your lifestyle and regimen with additional relief and support, we can help you find the CBD product that will best benefit you.<\/p>\n\n<p>CBD Plus USA in Allen, McKinney, and Prosper are Collin County’s best local source for safe, natural relief. Our products can be traced from seed to sale. This farm-to-table approach gives us the unique ability to consistently offer the highest quality products at the best available prices.<\/p>\n\n<p><b>Visit us today to see what CBD can do for you – you have nothing to lose but discomfort!<\/b><\/p>"
+        }
+      },
+      "1629789279d775ee49": {
+        "type": "shop-bestseller",
+        "settings": {
+          "heading-text": "Shop Our <br> Bestsellers",
+          "collection": "bestseller",
+          "grid": 4,
+          "show_price": true
+        }
+      },
+      "1629789350627c934e": {
+        "type": "what-cbd",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/what-is-cbd.jpg",
+          "heading": "What is <br> CBD?",
+          "text": "<p>Cannabidiol (CBD) is one of over 100 molecules produced by the Cannabis plant, called cannabinoids. Of the cannabinoids, CBD is the most abundant making up 40% of the plant’s extract. When ingested, it acts as a plant supplement for the body’s chemical needs and can provide many health benefits.<\/p>\n\n<p>There are two different species of the cannabis plant, Hemp and Marijuana. All of our CBD products come from the industrial hemp plant which contains high amounts of CBD and other cannabinoids and low amounts of THC (0.3% or less). Marijuana, on the other hand, contains high amounts of THC and low amounts of CBD. The anti-psychotic CBD is the most abundant cannabinoids and serves as the biggest medicinal benefactor. Unlike many pharmaceuticals, CBD does not have any harmful side effects. At CBD Plus USA, our CBD products are 100% organic, non-GMO, and do not contain fillers.<\/p>"
+        }
+      },
+      "1629789387181f3c22": {
+        "type": "how-cbd-work",
+        "settings": {
+          "bg-img": "shopify:\/\/shop_images\/bg_1.jpg",
+          "heading": "How CBD Works",
+          "text": "<p>CBD works as a supplement to the body’s Endocannabinoid system. Through the use of the body’s very own endo-cannabinoid system, CBD products can help restore the body back to its natural chemical levels.<\/p>\n\n<p>The Endocannabinoid system produces cannabinoids that mothers share with infants through breast milk. These cannabinoids help the infant grow new cells and thrive. The same system, in adults, can help clean cells, repair damaged ones, and can help grow new ones.<\/p>",
+          "left-text": "<p>Endocannabinoid receptors can go dormant, making it difficult for the body to utilize the molecule. CBD works by attaching itself to the CB1 and CB2 receptors in the Endocannabinoid system. Consistency over a 30-day period is often required to activate dormant receptors. The more receptors that are active, the better your body can utilize the CBD molecules.<\/p>\n\n<p>In addition, CBD and other cannabinoids supplement the body’s ability to regulate natural functions and maintain homeostasis. Achieving normal levels (homeostasis) at the cellular level rejuvenates the body’s ability to heal itself and flourish.<\/p>\n\n<p>When your body gets back to those normal levels, you can start feeling like yourself again; you can get your life back!<\/p>",
+          "image": "shopify:\/\/shop_images\/vector.jpg"
+        }
+      },
+      "16297894371257736e": {
+        "type": "cbd-use",
+        "blocks": {
+          "e2f426e1-82d2-4aae-9e8e-13a2f372d01d": {
+            "type": "select",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Tincture_Picture_2_1603296156_1.png",
+              "heading-text": "Sublingual Oils",
+              "desc-text": "Tinctures are a popular CBD delivery method that can be administered in two ways, via a spray or a dropper. Not only are they great tasting, they are also a user-friendly way to get all-day relief from inflammation, pain, anxiety, diabetes, and much more! Effects last 6-8 hours when properly dosed. 30 days of consistent use is required to awaken dormant receptors to achieve optimal results."
+            }
+          },
+          "6d67bd96-afac-4b98-9891-bbee04b660e6": {
+            "type": "select",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Sour_Peach_Gummy_Picture_1603296518_1.png",
+              "heading-text": "Edibles",
+              "desc-text": "Edibles are an easy way to ingest a daily dose of CBD. The effects can last from 4-6 hours but can take a little longer to start working (~45 minutes). The slow release and longer duration make edibles well-suited for treating chronic conditions that require a steady dose of medicine throughout the day. Great for children and others who cannot or will not ingest CBD in other forms. To achieve optimal results, start with small doses and wait at least an hour before consuming more."
+            }
+          },
+          "ceee765f-5502-4da8-9d45-ab255151f7bd": {
+            "type": "select",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Muscle_Joint_Capsules_1603296764_1.png",
+              "heading-text": "Capsules",
+              "desc-text": "Capsules and gel caps are perfect for people on the go; taken much like a vitamin or other supplement. The effects and duration are similar to that of consuming edibles."
+            }
+          },
+          "20e81bc7-1908-4979-8c87-52188d1fee71": {
+            "type": "select",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Full_Spectrum_Hot_Cream_Picture_1603295990_1.png",
+              "heading-text": "Topicals",
+              "desc-text": "Topical treatments, such as lotions, rubs, and salves, can be applied directly to the affected area. Topical treatments are great for pain, inflammation, and arthritis; some have been known to even help skin conditions, such as, psoriasis and eczema. Pain relief can last between 3-5 hours."
+            }
+          },
+          "e8ddf4a5-c5bb-450f-a580-c8ed3aebae01": {
+            "type": "select",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Vape_Cart_1603296873_1.png",
+              "heading-text": "Breathables",
+              "desc-text": "Breathing in CBD treatments is the quickest way to get the molecule into your bloodstream and get relief. Inhaling CBD is perfect to get fast-acting relief that can take out pain and anxiety in a matter of minutes. Breathables are best for sudden bursts of pain, anxiety, and other ailments."
+            }
+          }
+        },
+        "block_order": [
+          "e2f426e1-82d2-4aae-9e8e-13a2f372d01d",
+          "6d67bd96-afac-4b98-9891-bbee04b660e6",
+          "ceee765f-5502-4da8-9d45-ab255151f7bd",
+          "20e81bc7-1908-4979-8c87-52188d1fee71",
+          "e8ddf4a5-c5bb-450f-a580-c8ed3aebae01"
+        ],
+        "settings": {
+          "bg-img": "shopify:\/\/shop_images\/bg.jpg",
+          "heading": "How To Use CBD",
+          "text": "CBD REMEDIES are available in many forms and can be ingested in various ways. Here are just a few of our most popular options:"
+        }
+      },
+      "1629789561390e7127": {
+        "type": "customer-review",
+        "blocks": {
+          "950e3925-db3d-422b-9c50-d7694c32ae14": {
+            "type": "select",
+            "settings": {
+              "rating": "5",
+              "desc-text": "One of my favorite CBD shops to visit.",
+              "author-name": "Grisel Martinez",
+              "author-post": "(CBD Plus USA Prosper)"
+            }
+          },
+          "42061113-9cb2-4293-88f4-4121349d9004": {
+            "type": "select",
+            "settings": {
+              "rating": "5",
+              "desc-text": "One of my favorite CBD shops to visit.",
+              "author-name": "Grisel Martinez",
+              "author-post": "(CBD Plus USA Prosper)"
+            }
+          }
+        },
+        "block_order": [
+          "950e3925-db3d-422b-9c50-d7694c32ae14",
+          "42061113-9cb2-4293-88f4-4121349d9004"
+        ],
+        "settings": {
+          "bg-img": "shopify:\/\/shop_images\/bg_6_1.png",
+          "heading": "What People Are Saying",
+          "text": "Real reviews from real people."
+        }
+      },
+      "1629789868e3207755": {
+        "type": "services",
+        "blocks": {
+          "75709a65-3abd-415a-88e0-6d5fd953dc03": {
+            "type": "image-section",
+            "settings": {
+              "logo-image": "shopify:\/\/shop_images\/Vector_1.png",
+              "heading": "Subscription Services",
+              "button_label": "",
+              "button_link": "",
+              "text": "Do you count on having your Muscle and Joint Capsules, 2500 mg Full Spectrum Tincture, or Charlotte’s Web Sleep Gummies for each new month? We can ensure we reserve your go-to CBD products, and contact you for pick up or shipment on a scheduled rotation of your choice. Set up your subscription\/notification service today!"
+            }
+          },
+          "90bb1a69-0833-4907-8a1d-f06775db3a0d": {
+            "type": "image-section",
+            "settings": {
+              "logo-image": "shopify:\/\/shop_images\/Vector_2.png",
+              "heading": "Home Delivery",
+              "button_label": "Coming Soon",
+              "button_link": "#",
+              "text": "Place your order online or by phone and have it delivered by us - no third party, lowering expensive unexpected delivery charges...Simple as that!"
+            }
+          },
+          "cf4d0914-00cb-4e0d-ba5e-fce2e1fb746c": {
+            "type": "image-section",
+            "settings": {
+              "logo-image": "shopify:\/\/shop_images\/car_1.png",
+              "heading": "Curbside Pick-up",
+              "button_label": "",
+              "button_link": "",
+              "text": "Place your order online or phone it in; and have it ready for pick up, bringing it straight out to your vehicle."
+            }
+          },
+          "42495a53-e390-46b7-a717-1b5a413e26ea": {
+            "type": "image-section",
+            "settings": {
+              "logo-image": "shopify:\/\/shop_images\/joint_1.png",
+              "heading": "Rolling Services",
+              "button_label": "",
+              "button_link": "",
+              "text": "Dying to try our loose Delta 8 flower without the need for apparatus? Request our free rolling services – paper purchase required and gratuity applies."
+            }
+          }
+        },
+        "block_order": [
+          "75709a65-3abd-415a-88e0-6d5fd953dc03",
+          "90bb1a69-0833-4907-8a1d-f06775db3a0d",
+          "cf4d0914-00cb-4e0d-ba5e-fce2e1fb746c",
+          "42495a53-e390-46b7-a717-1b5a413e26ea"
+        ],
+        "settings": {
+          "background_image": "shopify:\/\/shop_images\/bg_4.jpg",
+          "heading": "Exclusive Services"
         }
       }
     },
     "content_for_index": [
-
+      "1629788740d7c71a9e",
+      "16297890975b8f1690",
+      "1629789279d775ee49",
+      "1629789350627c934e",
+      "1629789387181f3c22",
+      "16297894371257736e",
+      "1629789561390e7127",
+      "1629789868e3207755"
     ]
   },
   "presets": {
@@ -131,7 +356,6 @@
             "announcement-bar-0": {
               "type": "announcement",
               "settings": {
-                "color_scheme": "background-1"
               }
             }
           },
@@ -152,31 +376,7 @@
       "colors_background_1": "#EFECEC",
       "colors_background_2": "#C1BCAE",
       "type_header_font": "americana_n4",
-      "type_body_font": "quattrocento_sans_n4",
-      "sections": {
-        "footer": {
-          "type": "footer",
-          "blocks": {
-            "menu": {
-              "type": "link_list",
-              "settings": {
-              }
-            },
-            "text": {
-              "type": "text",
-              "settings": {
-              }
-            }
-          },
-          "block_order": [
-            "menu",
-            "text"
-          ],
-          "settings": {
-            "color_scheme": "accent-1"
-          }
-        }
-      }
+      "type_body_font": "quattrocento_sans_n4"
     }
   }
 }
