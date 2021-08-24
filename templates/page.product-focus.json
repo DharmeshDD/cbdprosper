@@ -3,16 +3,16 @@
       "image_banner": {
         "type": "image-banner"
       },
-      "general_content": {
-          "type": "general-content"
+      "zigzag_content": {
+          "type": "zigzag-content"
       },
-      "our_service": {
-        "type": "ourservices"
+      "dark_content": {
+        "type": "dark-content"
     }
     },
     "order": [
       "image_banner",
-      "general_content",
-      "our_service"
+      "zigzag_content",
+      "dark_content"
     ]
-  }
+  }  

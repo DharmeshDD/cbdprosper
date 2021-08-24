@@ -1,0 +1,78 @@
+<div class="headline">
+    {% capture image_layout %}
+          <div class="col-lg-4">
+             {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image | img_url:'master' }}" class="img-fluid" alt="{{ section.settings.heading }}">
+          {% endif %}
+          </div>
+      {% endcapture %}
+    <div class="container">
+      <div class="row" >
+          {% if section.settings.layout == 'left' %}
+                {{ image_layout }}
+            {% endif %}
+        <div class="col-lg-8">
+          <div class="heading">
+            {% if section.settings.heading != blank %}
+              <h1>{{ section.settings.heading }}</h1>
+            {% endif %}
+          </div>
+          <div class="content">
+            {% if section.settings.text != blank %}
+              <p>{{ section.settings.text }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% if section.settings.layout == 'right' %}
+                {{ image_layout }}
+            {% endif %}
+      </div>
+    </div>
+  </div>
+  
+  
+  {% schema %}
+   {
+   "name": "Image with text",
+   "settings": [
+       {
+         "id": "image",
+         "type": "image_picker",
+         "label": "Image"
+       },
+       {
+          "type": "select",
+          "id": "layout",
+          "label":"Image alignment",
+          "default": "right",
+          "options": [
+            {
+              "value": "left",
+              "label":"Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+       },
+       {
+         "id": "heading",
+         "type": "text",
+         "label": "Heading"
+       },
+       {
+         "id": "text",
+         "type": "html",
+         "label": "Text"
+       }
+   ],
+   "presets":[
+        {
+           "name":"Zigzag Content",
+           "category":"Image with text"
+        }
+     ]
+  }
+  {% endschema %}
+  
