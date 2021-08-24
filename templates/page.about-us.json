@@ -1,19 +1,35 @@
 {
-    "sections": {
-      "image_banner": {
-        "type": "image-banner"
-      },
-      "image_with_text": {
-        "type": "image-with-text"
-      },
-      "general_content": {
-        "type": "general-content"
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "settings": {
+        "bg-img": "shopify:\/\/shop_images\/bg.png",
+        "heading": ""
       }
     },
-    "order": [
-      "image_banner",
-      "image_with_text",
-      "general_content"
-    ]
-  }
-  
+    "image_with_text": {
+      "type": "image-with-text",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/bg_6_1.png",
+        "image": "shopify:\/\/shop_images\/Living_Magazine_Cover_1603221490_1.png",
+        "layout": "left",
+        "heading": "About Us",
+        "text": "<p>CBD Plus was founded upon one cornerstone: empowering each customer to live their best life. With this core value guiding us, we have cultivated an environment where hard work, respect, and community flourish as well as quality hemp.<\/p>\n\n<p>We offer alternative, over the counter, non-narcotic health solutions for symptoms associated with anxiety, pain, inflammation, diabetes, and more. If you’re tired of your medication’s side effects or ineffectiveness, we can help you find the CBD product that will best benefit you.<\/p>\n\n<p>Visit us today to see what CBD can do for you – you’ll have nothing to lose but pain!<\/p>"
+      }
+    },
+    "general_content": {
+      "type": "general-content",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/bg.jpg",
+        "heading": "The Inspiration Behind CBD Plus USA",
+        "subheading": "Allen, McKinney, Prosper",
+        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur arcu non varius parturient massa netus purus consectetur nibh. Est leo, tristique nisl, quis eget sed ornare sed varius. Suspendisse dolor, aliquam dolor metus condimentum. Est leo, tristique nisl, quis eget sed ornare sed varius. A nulla quam suspendisse massa tortor dui. In porttitor amet, augue nunc amet. Donec cum facilisi amet suspendisse porttitor mauris tempor. Id malesuada ut blandit leo vulputate.<\/p>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur arcu non varius parturient massa netus purus consectetur nibh. Suspendisse dolor, aliquam dolor metus condimentum. Est leo, tristique nisl, quis eget sed ornare sed varius. A nulla quam suspendisse massa tortor dui. In porttitor amet, augue nunc amet.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "image_with_text",
+    "general_content"
+  ]
+}

@@ -1,11 +1,22 @@
 {
-    "sections": {
-      "image_banner": {
-        "type": "image-banner"
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "settings": {
+        "bg-img": "shopify:\/\/shop_images\/bg_1.png",
+        "heading": "FAQs"
       }
     },
-    "order": [
-      "image_banner"
-    ]
-  } 
-  
+    "general_content": {
+        "type": "general-content"
+    },
+    "accordian": {
+        "type": "accordian"
+    }
+  },
+  "order": [
+    "image_banner",
+    "general_content",
+    "accordian"
+  ]
+}
