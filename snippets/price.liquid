@@ -42,6 +42,7 @@
         - div.price__sale: Displayed when a variant is a sale
         - div.price__availability: Displayed when the product is sold out
     {%- endcomment -%}
+    
     <div class="price__regular">
       <dt>
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
@@ -52,7 +53,7 @@
         </span>
       </dd>
     </div>
-    <div class="price__sale">
+    <!-- <div class="price__sale">
       <dt class="price__compare">
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       </dt>
@@ -73,7 +74,7 @@
           {{ money_price }}
         </span>
       </dd>
-    </div>
+    </div> -->
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <dt class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</dt>
       <dd {% if show_badges == false %}class="price__last"{% endif %}>
