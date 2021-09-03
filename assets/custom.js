@@ -67,11 +67,10 @@ $('#customer-review').owlCarousel({
     }   
 });
 
-$(".announcement-close-icon").click(function(){
-   $(".announcement").addClass('d-none');
-});
+
 
 $(".phoneno").click(function(){
+    $(".phoneno").toggleClass('phoneicon');
     $(".contact-numbers").toggleClass('display');
  });
 });
@@ -155,4 +154,49 @@ $(document).ready(function() {
         sync1.data('owl.carousel').to(number, 300, true);
     });
 });
-  
+
+
+// Search
+$('.search-icon-link, .close-icon').click(function () {
+    if ($('.inputSearch').hasClass('active')) {
+        $('body').removeClass('search-open');
+        $('.inputSearch').hide();
+        $('.inputSearch').removeClass('active');
+        $('.search.float-right').removeClass('active');
+   } else {
+        $('body').addClass('search-open');
+        $('.inputSearch').addClass('active');
+        $('.search.float-right').addClass('active');
+        $('.inputSearch').show();
+        $('.inputSearch').focus();
+   }
+})
+
+$('.close-icon-mobile a').click(function (){
+    $('.mobile-search').toggleClass('active');
+})
+
+// Header Height 
+
+function headerTop(){
+    var header = document.getElementsByClassName("announcement")[0];
+    var header_height = header.offsetHeight + "px";
+    $( '.header' ).css( {
+        'top': header_height
+    });
+}
+
+headerTop();
+$(window).on("load",function () {
+    headerTop();
+})
+$(window).resize(function () {
+    headerTop();
+})
+
+$(".announcement-close-icon").click(function(){
+    $( '.header' ).css( {
+        'top': '0px'
+    });
+    $(".announcement").addClass('d-none');
+ });
