@@ -60,8 +60,8 @@
             <div class="search float-right">
               <div class="search-icon">
                   <a class="search-icon-link" href="javascript:void(0)">
-                      <img src="/assets/search-white.svg" class="searchdefault" alt="Search" >
-                      <img src="/assets/search-active.svg" class="search_active_icon" alt="Search Active Icon" >
+                      <img src="{{ 'search-white.svg' | asset_url }}" class="searchdefault" alt="Search" >
+                      <img src="{{ 'search-active.svg' | asset_url }}" class="search_active_icon" alt="Search Active Icon" >
                   </a>
               </div>
               <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form navbar-form">
