@@ -14,7 +14,6 @@
 {% endcomment %}
 
 <div class="card-wrapper">
-  <a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link">
     <span class="visually-hidden">{{ product_card_product.title | escape }}</span>
 
     <div class="card card--product{% if product_card_product.featured_media == nil %} card--text-only card--soft{% endif %}{% if product_card_product.featured_media != nil and show_image_outline %} card--outline{% endif %}" tabindex="-1">
@@ -96,9 +95,13 @@
 
         {% comment %} TODO: metafield {% endcomment %}
         <span class="caption-large light">{{ block.settings.description | escape }}</span>
-
-        {% render 'price', product: product_card_product, price_class: '' %}
+        {% if collection.handle == 'all'  %}
+           {% render 'price', product: product_card_product, price_class: '' %}
+        {% endif %} 
+        <a href="{{ product_card_product.url | default: '#' }}" class="btn btn-green"> View Product </a>
       </div>
     </div>
-  </a>
+
+
+  
 </div>

@@ -1,55 +1,35 @@
 {% comment %}theme-check-disable TemplateLength{% endcomment %}
-{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
-{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
-{{ 'component-rte.css' | asset_url | stylesheet_tag }}
-{{ 'component-slider.css' | asset_url | stylesheet_tag }}
-
-<link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
-
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-
-{%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
-{%- if first_3d_model -%}
-  {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
-  <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'">
-  <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
-{%- endif -%}
-
+<style>
+  
+</style>
 <section class="page-width">
   <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
-      <slider-component class="slider-mobile-gutter">
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}
         </a>
-        <ul class="product__media-list grid grid--peek list-unstyled slider slider--mobile" role="list">
+
+      <div id="sync1" class="owl-carousel owl-theme">
           {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
-          {%- if product.selected_or_first_available_variant.featured_media != null -%}
-            {%- assign media = product.selected_or_first_available_variant.featured_media -%}
-            <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
-              {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
-            </li>
-          {%- endif -%}
+          {%- for media in product.media -%}
+            <div class="item product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+              {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
+            </div>
+            {%- endfor -%}
+        
+      </div>
+
+      <div id="sync2" class="owl-carousel owl-theme">
           {%- for media in product.media -%}
             {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-              <li class="product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
+              <div class="item product__media-item grid__item slider__slide{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}" data-media-id="{{ section.id }}-{{ media.id }}">
                 {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
-              </li>
+              </div>
             {%- endunless -%}
           {%- endfor -%}
-        </ul>
-        <div class="slider-buttons slider-buttons--overlay no-js-hidden{% if product.media.size < 2 %} small-hide{% endif %}">
-          <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'accessibility.of' | t }}</span>
-            <span class="slider-counter--total">{% if section.settings.hide_variants %}{{ product.media.size | minus: variant_images.size | plus: 1 }}{% else %}{{ product.media.size }}{% endif %}</span>
-          </div>
-          <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-          <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
         </div>
-      </slider-component>
+       
       {%- if first_3d_model -%}
         <button
           class="button button--full-width product__xr-button"
@@ -73,14 +53,11 @@
           {%- case block.type -%}
           {%- when '@app' -%}
             {% render block %}
-          {%- when 'text' -%}
-            <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
-              {{- block.settings.text -}}
-            </p>
           {%- when 'title' -%}
             <h1 class="product__title" {{ block.shopify_attributes }}>
               {{ product.title | escape }}
             </h1>
+            {% comment %}
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
@@ -91,6 +68,7 @@
                 {{ form | payment_terms }}
               {%- endform -%}
             </div>
+            {% endcomment %}
           {%- when 'description' -%}
             {%- if product.description != blank -%}
               <div class="product__description rte">
@@ -117,6 +95,7 @@
                 </div>
               </details>
             </div>
+            {% comment %}
           {%- when 'quantity_selector' -%}
             <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
               <label class="form__label" for="Quantity-{{ section.id }}">
@@ -141,48 +120,36 @@
                 </button>
               </quantity-input>
             </div>
+            {% endcomment %}
           {%- when 'popup' -%}
               <modal-opener class="product-popup-modal__opener no-js-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
                 <button id="ProductPopup-{{ block.id }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ block.settings.text | default: block.settings.page.title }}</button>
               </modal-opener>
               <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js">{{ block.settings.text }}</a>
           {%- when 'share' -%}
-            <share-button class="share-button" {{ block.shopify_attributes }}>
-              <button class="share-button__button hidden">
-                {% render 'icon-share' %}
-                {{ block.settings.share_label | escape }}
-              </button>
-              <details>
-                <summary class="share-button__button">
-                  {% render 'icon-share' %}
-                  {{ block.settings.share_label | escape }}
-                </summary>
-                <div id="Product-share-{{ section.id }}" class="share-button__fallback motion-reduce">
-                  <div class="field">
-                    <span id="ShareMessage-{{ section.id }}" class="share-button__message hidden" role="status">
-                    </span>
-                    <input type="text"
-                          class="field__input"
-                          id="url"
-                          value="{{ shop.url | append: product.url }}"
-                          placeholder="{{ 'general.share.share_url' | t }}"
-                          onclick="this.select();"
-                          readonly
-                    >
-                    <label class="field__label" for="url">{{ 'general.share.share_url' | t }}</label>
-                  </div>
-                  <button class="share-button__close hidden no-js-hidden">
-                    {% render 'icon-close' %}
-                    <span class="visually-hidden">{{ 'general.share.close' | t }}</span>
-                  </button>
-                  <button class="share-button__copy no-js-hidden">
-                    {% render 'icon-clipboard' %}
-                    <span class="visually-hidden">{{ 'general.share.copy_to_clipboard' | t }}</span>
-                  </button>
-                </div>
-              </details>
-            </share-button>
-            <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
+            <!-- /snippets/social-sharing.liquid -->
+              <ul class="social-sharing">
+
+                
+                  <li>
+                    <a target="_blank" href="//www.facebook.com/sharer.php?u={{ shop.url | append: share_permalink }}" class="btn btn--small btn--share share-facebook">
+                      <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                      <span class="share-title" aria-hidden="true">{{ 'general.social.share_on_facebook' | t }}</span>
+                      <span class="visually-hidden">{{ 'general.social.alt_text.share_on_facebook' | t }}</span>
+                    </a>
+                  </li>
+             
+                  <li>
+                    <a target="_blank" href="//twitter.com/share?text={{ share_title | url_param_escape }}&amp;url={{ shop.url | append: share_permalink }}" class="btn btn--small btn--share share-twitter">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <span class="share-title" aria-hidden="true">{{ 'general.social.share_on_twitter' | t }}</span>
+                      <span class="visually-hidden">{{ 'general.social.alt_text.share_on_twitter' | t }}</span>
+                    </a>
+              
+                 
+
+              </ul>
+
           {%- when 'variant_picker' -%}
             {%- unless product.has_only_default_variant -%}
               {%- if block.settings.picker_type == 'button' -%}
@@ -259,6 +226,7 @@
                 </div>
               </div>
             </noscript>
+            {% comment %}
           {%- when 'buy_buttons' -%}
             <div {{ block.shopify_attributes }}>
               <product-form class="product-form">
@@ -283,9 +251,7 @@
                   </div>
                 {%- endform -%}
               </product-form>
-
-              {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
-
+          {% endcomment %}
               {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
               <pickup-availability class="product__pickup-availabilities no-js-hidden"
@@ -313,98 +279,47 @@
     </div>
   </div>
 
-  <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal">
-    <div class="product-media-modal__dialog" role="dialog" aria-label="{{ 'products.modal.label' | t }}" aria-modal="true" tabindex="-1">
-      <button id="ModalClose-{{ section.id }}" type="button" class="product-media-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
-
-      <div class="product-media-modal__content" role="document" aria-label="{{ 'products.modal.label' | t }}" tabindex="0">
-        {%- for media in product.media -%}
-          {%- if media.media_type == 'image' -%}
-            <img
-              srcset="{%- if media.preview_image.width >= 550 -%}{{ media.preview_image | img_url: '550x' }} 550w,{%- endif -%}
-                      {%- if media.preview_image.width >= 1100 -%}{{ media.preview_image | img_url: '1100x' }} 1100w,{%- endif -%}
-                      {%- if media.preview_image.width >= 1680 -%}{{ media.preview_image | img_url: '1680x' }} 1680w,{%- endif -%}
-                      {%- if media.preview_image.width >= 1920 -%}{{ media.preview_image | img_url: '1920x' }} 1920w,{%- endif -%}
-                      {%- if media.preview_image.width >= 2048 -%}{{ media.preview_image | img_url: '2048x' }} 2048w,{%- endif -%}
-                      {%- if media.preview_image.width >= 4096 -%}{{ media.preview_image | img_url: '4096x' }} 4096w{%- endif -%}"
-              sizes="(min-width: 750px) calc(100vw - 12rem), 100vw"
-              src="{{ media.preview_image | img_url: '750x' }}"
-              alt="{{ media.alt | escape }}"
-              loading="lazy"
-              width="1100"
-              height="{{ 1100 | divided_by: media.preview_image.aspect_ratio | ceil }}"
-              data-media-id="{{ media.id }}"
-              {% if section.settings.hide_variants and variant_images contains media.src %}class="product__media-item--variant"{% endif %}
-            >
-          {%- else -%}
-            {%- if media.media_type == 'model' -%}
-              <div class="product-media-modal__model" data-media-id="{{ media.id }}">
-                <product-model class="deferred-media media media--transparent" style="padding-top: min(calc(100vh - 12rem), 100%)">
-            {%- else -%}
-              <deferred-media class="deferred-media media" style="padding-top: min(calc(100vh - 12rem), {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%)" data-media-id="{{ media.id }}">
-            {%- endif -%}
-
-              <button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster" type="button">
-                <span class="deferred-media__poster-button motion-reduce">
-                  {%- if media.media_type == 'model' -%}
-                    {%- render 'icon-3d-model' -%}
-                  {%- else -%}
-                    {%- render 'icon-play' -%}
-                  {%- endif -%}
-                </span>
-                <img
-                  srcset="{% if media.preview_image.width >= 288 %}{{ media.preview_image | img_url: '288x' }} 288w,{% endif %}
-                          {% if media.preview_image.width >= 576 %}{{ media.preview_image | img_url: '576x' }} 576w,{% endif %}
-                          {% if media.preview_image.width >= 750 %}{{ media.preview_image | img_url: '750x' }} 750w,{% endif %}
-                          {% if media.preview_image.width >= 1100 %}{{ media.preview_image | img_url: '1100x' }} 1100w,{% endif %}
-                          {% if media.preview_image.width >= 1500 %}{{ media.preview_image | img_url: '1500x' }} 1500w{% endif %}"
-                  src="{{ media | img_url: '550x550' }}"
-                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
-                  loading="lazy"
-                  width="576"
-                  height="{{ 576 | divided_by: media.preview_image.aspect_ratio }}"
-                  alt="{{ media.preview_image.alt | escape }}"
-                >
-              </button>
-              <template>
-                {%- case media.media_type -%}
-                {%- when 'external_video' -%}
-                  {%- assign video_class = 'js-' | append: media.host -%}
-                  {%- if media.host == 'youtube' -%}
-                    {{ media | external_video_url: autoplay: true, loop: section.settings.enable_video_looping, playlist: media.external_id | external_video_tag: class: video_class, loading: "lazy" }}
-                  {%- else -%}
-                    {{ media | external_video_url: autoplay: true, loop: section.settings.enable_video_looping | external_video_tag: class: video_class, loading: "lazy" }}
-                  {%- endif -%}
-                {%- when 'video' -%}
-                  {{ media | media_tag: image_size: "2048x", autoplay: true, loop: section.settings.enable_video_looping, controls: true, preload: "none", autoplay: true }}
-                {%- when 'model' -%}
-                  {{ media | media_tag: image_size: "2048x", toggleable: true }}
-                {%- endcase -%}
-              </template>
-
-            {%- if media.media_type == 'model' -%}
-                </product-model>
-                <button
-                  class="button button--full-width product__xr-button"
-                  type="button"
-                  aria-label="{{ 'products.product.xr_button_label' | t }}"
-                  data-shopify-xr
-                  data-shopify-model3d-id="{{ media.id }}"
-                  data-shopify-title="title"
-                  data-shopify-xr-hidden
-                  >
-                  {% render 'icon-3d-model' %}
-                  {{ 'products.product.xr_button' | t }}
-                </button>
-              </div>
-            {%- else -%}
-              </deferred-media>
-            {%- endif -%}
-          {%- endif -%}
-        {%- endfor -%}
+  {%- if product.metafields.products.benefits != blank -%}
+ <div class="product-benefit">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="heading">
+        <h2>Product Benefits</h2>
       </div>
+      <div class="content">
+      {{ product.metafields.products.benefits }}
     </div>
-  </product-modal>
+    </div>
+    <div class="col-lg-6">
+       <img src="{{ product.metafields.products.benefit_image | img_url:'master' }}">
+    </div>
+  </div>
+
+</div>
+ </div>
+ {%- endif -%}
+
+ {%- if product.metafields.products.full_description != blank -%}
+
+ <div class="product-fulldesc"> 
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="heading">
+          <h2>Full Description</h2>
+        </div>
+        <div class="content">
+        {{ product.metafields.products.full_description }}
+      </div>
+      </div>
+     
+    </div>
+  
+  </div>
+   </div>
+   {%- endif -%}
+
 
   {% assign popups = section.blocks | where: "type", "popup" %}
   {%- for block in popups -%}
@@ -420,49 +335,6 @@
   {%- endfor -%}
 </section>
 
-{% javascript %}
-  class ProductModal extends ModalDialog {
-    constructor() {
-      super();
-    }
-
-    hide() {
-      super.hide();
-      window.pauseAllMedia();
-    }
-
-    show(opener) {
-      super.show(opener);
-      this.showActiveMedia();
-    }
-
-    showActiveMedia() {
-      this.querySelectorAll(`[data-media-id]:not([data-media-id="${this.openedBy.getAttribute("data-media-id")}"])`).forEach((element) => {
-          element.classList.remove('active');
-        }
-      )
-      const activeMedia = this.querySelector(`[data-media-id="${this.openedBy.getAttribute("data-media-id")}"]`);
-      activeMedia.classList.add('active');
-      activeMedia.scrollIntoView();
-
-      const container = this.querySelector('[role="document"]');
-      container.scrollLeft = (activeMedia.width - container.clientWidth) / 2;
-
-      if (activeMedia.nodeName == 'DEFERRED-MEDIA' && activeMedia.querySelector('template')?.content?.querySelector('.js-youtube'))
-        activeMedia.loadContent();
-    }
-  }
-
-  customElements.define('product-modal', ProductModal);
-{% endjavascript %}
-
-{%- if first_3d_model -%}
-  <script type="application/json" id="ProductJSON-{{ product.id }}">
-    {{ product.media | where: 'media_type', 'model' | json }}
-  </script>
-
-  <script src="{{ 'product-model.js' | asset_url }}" defer></script>
-{%- endif -%}
 
 {% schema %}
 {
