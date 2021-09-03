@@ -1,10 +1,22 @@
 {
   "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "settings": {
+        "bg-img": "shopify:\/\/shop_images\/bg.png",
+        "heading": ""
+      }
+    },
+    "feature_blog": {
+      "type": "feature-blog"
+    },
     "main": {
       "type": "main-blog"
     }
   },
   "order": [
+    "image_banner",
+    "feature_blog",
     "main"
   ]
 }
