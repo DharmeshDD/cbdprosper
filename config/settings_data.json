@@ -108,9 +108,9 @@
             "type": "select",
             "settings": {
               "slider-image": "shopify:\/\/shop_images\/slider1.jpg",
-              "layout": "right",
+              "layout": "left",
               "heading-text": "Live Your Best Life with Products from",
-              "subheading-text": "CBD Plus USA Allen, McKinney, Prosper",
+              "subheading-text": "CBD Plus USA <br> Allen, McKinney, Prosper",
               "linktext": "Shop Now",
               "link": "#"
             }
@@ -119,9 +119,9 @@
             "type": "select",
             "settings": {
               "slider-image": "shopify:\/\/shop_images\/slider2.jpg",
-              "layout": "left",
+              "layout": "right",
               "heading-text": "Meet Our",
-              "subheading-text": "CBD Plus USA Guides!",
+              "subheading-text": "CBD Plus USA <br> Guides!",
               "linktext": "Our Team",
               "link": "#"
             }
@@ -130,7 +130,7 @@
             "type": "select",
             "settings": {
               "slider-image": "shopify:\/\/shop_images\/slider3.jpg",
-              "layout": "right",
+              "layout": "left",
               "heading-text": "Live Your Best Life!",
               "subheading-text": "",
               "linktext": "FAQs",
