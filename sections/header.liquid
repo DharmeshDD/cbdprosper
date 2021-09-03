@@ -1,14 +1,16 @@
 {{ 'header.css' | asset_url | stylesheet_tag }}
 <header class="header style1">
   <div class="header-navbar">
-     <div class="container-fluid p-0">
+     <div class="container-fluid">
         <nav class="navbar navbar-expand-md navbar-dark">
           <div class="phoneno">
-           
-            <i class="fa fa-phone" aria-hidden="true"></i>
+           <a href="#">
+            <img src="{{ 'phone-white.svg' | asset_url }}" alt="Phone" class="whiteicon">
+            <img src="{{ 'phone-green.svg' | asset_url }}" alt="Phone" class="greenicon">
+           </a>            
            <div class="contact-numbers">
             {% for block in section.blocks %}
-             <a href=""><i class="fa fa-phone" aria-hidden="true"></i>{{ block.settings.name }}: {{ block.settings.phno }}</a>
+             <a href=""><i class="fa fa-phone" aria-hidden="true"></i>{{ block.settings.name }}: <span>{{ block.settings.phno }}</span></a>
              {% endfor %}
            </div>
          </div>
@@ -58,19 +60,23 @@
             <div class="search float-right">
               <div class="search-icon">
                   <a class="search-icon-link" href="javascript:void(0)">
-                      <img src="/assets/search.png" class="searchdefault" alt="Search" >
-                      <img src="/assets/search-active.png" class="search_active_icon" alt="Search Active Icon" >
+                      <img src="/assets/search-white.svg" class="searchdefault" alt="Search" >
+                      <img src="/assets/search-active.svg" class="search_active_icon" alt="Search Active Icon" >
                   </a>
               </div>
-              <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+              <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form navbar-form">
                 <div class="field">
-                  <input class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.search' | t }}">
-                  <label class="field__label" for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
+                  <input class="search__input field__input inputSearch" id="Search-In-Modal" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.search' | t }}">
+                  {% comment %} <label class="field__label" for="Search-In-Modal">{{ 'general.search.search' | t }}</label> {% endcomment %}
                   <input type="hidden" name="options[prefix]" value="last">
                 
                 </div>
-              </form>
-              <div class="search-close-icon"><img src="/assets/close.png"></div>
+                <div class="search-close-icon">                  
+                  <a href="javascript:void(0)">
+                      <img src="/assets/close-green.svg">
+                  </a>
+                </div>
+              </form>              
           </div>
       
             </div>

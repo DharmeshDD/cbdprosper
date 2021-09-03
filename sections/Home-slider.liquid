@@ -7,17 +7,17 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
-              <div class="content align-{{ section.settings.layout }}">
+              <div class="content align-{{ block.settings.layout }}">
               {% if block.settings.heading-text != blank %}
-                <h1>{{ block.settings.heading-text }}</h1> 
+                <h4 class="h4">{{ block.settings.heading-text }}</h4> 
               {% endif %}
 
               {% if block.settings.subheading-text != blank %}
-                <h1>{{ block.settings.subheading-text }}</h1> 
+                <h1 class="h1">{{ block.settings.subheading-text }}</h1> 
               {% endif %}
 
               {% if block.settings.linktext != blank %}
-                <a href="{{ block.settings.link }}" class="btn btn-green"> {{ block.settings.linktext }} </a> 
+                <a href="{{ block.settings.link }}" class="btn-custom btn-green"> <span>{{ block.settings.linktext }}</span> </a> 
               {% endif %}
             </div>
             </div>
@@ -66,7 +66,7 @@
                 },
                 {
                   "id": "subheading-text",
-                  "type": "text",
+                  "type": "html",
                   "label": "Sub Heading"
                 },
                 {
