@@ -1,16 +1,17 @@
+
 <div class="all-blog">
   <div class="container">
-{%- paginate blog.articles by 6 -%}
-
- 
+{%- paginate blog.articles by 7 -%}
+{% assign blog_offset = 0 %}
+{% if paginate.current_page == 1 %}
+  {% assign blog_offset = 1 %}
+{% endif%}
     <div class="row">
-      {%- for article in blog.articles  -%}
-      {% if forloop.first == true %}
-      {%else %}
+      {%- for article in blog.articles offset:blog_offset  -%}
         <div class="col-lg-4">
           {%- render 'article-card', article: article, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author -%}
         </div>
-      {% endif %} 
+     
       {%- endfor -%}
     </div>
 
@@ -21,6 +22,7 @@
 {%- endpaginate -%}
 </div>
 </div>
+
 {% schema %}
 {
   "name": "t:sections.main-blog.name",

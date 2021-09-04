@@ -5,8 +5,8 @@
         <nav class="navbar navbar-expand-md navbar-dark">
           <div class="phoneno">
            <a href="#">
-            <img src="{{ 'phone-white.svg' | asset_url }}" alt="Phone" class="whiteicon">
-            <img src="{{ 'phone-green.svg' | asset_url }}" alt="Phone" class="greenicon">
+            <img data-src="{{ 'phone-white.svg' | asset_url }}" alt="Phone" class="lazyload whiteicon">
+            <img data-src="{{ 'phone-green.svg' | asset_url }}" alt="Phone" class="lazyload greenicon">
            </a>            
            <div class="contact-numbers">
             {% for block in section.blocks %}
@@ -17,7 +17,7 @@
            <!--  Show this only on mobile to medium screens  -->
            <a href="{{ routes.root_url }}" class="navbar-brand d-md-none">
            {% if section.settings.logo != nil %}
-           <img class="lazyload"  src="{{ section.settings.logo | img_url: 'master' }}">
+           <img class="lazyload"  data-src="{{ section.settings.logo | img_url: 'master' }}" alt="mobile-logo">
            {%- else -%}
            <span class="h2">{{ shop.name }}</span>
            {%- endif -%}
@@ -40,7 +40,7 @@
               <!--   Show this only lg screens and up   -->
               <a href="{{ routes.root_url }}" class="navbar-brand d-none d-md-block m-0 p-0">
               {% if section.settings.logo != nil %}
-              <img class="lazyload"  src="{{ section.settings.logo | img_url: 'master' }}">
+              <img class="lazyload"  data-src="{{ section.settings.logo | img_url: 'master' }}" alt="desktop-Logo">
               {%- else -%}
               <span class="h2">{{ shop.name }}</span>
               {%- endif -%}
@@ -60,8 +60,8 @@
             <div class="search float-right">
               <div class="search-icon">
                   <a class="search-icon-link" href="javascript:void(0)">
-                      <img src="{{ 'search-white.svg' | asset_url }}" class="searchdefault" alt="Search" >
-                      <img src="{{ 'search-active.svg' | asset_url }}" class="search_active_icon" alt="Search Active Icon" >
+                      <img data-src="{{ 'search-white.svg' | asset_url }}" class="lazyload searchdefault" alt="Search" >
+                      <img data-src="{{ 'search-active.svg' | asset_url }}" class="lazyload search_active_icon" alt="Search Active Icon" >
                   </a>
               </div>
               <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form navbar-form">
@@ -73,7 +73,7 @@
                 </div>
                 <div class="search-close-icon">                  
                   <a href="javascript:void(0)">
-                      <img src="{{ 'close-green.svg' | asset_url }}">
+                      <img class="lazyload" data-src="{{ 'close-green.svg' | asset_url }}" alt="close-icon">
                   </a>
                 </div>
               </form>              

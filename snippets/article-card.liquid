@@ -11,59 +11,73 @@
     Usage:
     {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
 {% endcomment %}
-
+<style>.lazyload,.lazyloading{opacity:0}.lazyloaded{opacity:1;transition:opacity 1s}</style>
 <article class="article-card{% if article.image == blank or show_image == false %} article-card--no-image{% endif %}" aria-labelledby="Article-{{ article.id }}">
-  <a href="{{ article.url }}" class="article-content motion-reduce">
-    {%- if show_image == true and article.image -%}
+
+    {%- if article.image -%}
       <div class="article-card__image-wrapper">
-        <div class="article-card__image media media--landscape">
+        <div class="article-card__image media media--landscape"> 
+          <a href="{{ article.url }}" class="article-content motion-reduce">
           <img
-            srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | img_url: '165x' }} 165w,{%- endif -%}
+            data-src="{%- if article.image.src.width >= 165 -%}{{ article.image.src | img_url: '165x' }} 165w,{%- endif -%}
               {%- if article.image.src.width >= 360 -%}{{ article.image.src | img_url: '360x' }} 360w,{%- endif -%}
               {%- if article.image.src.width >= 533 -%}{{ article.image.src | img_url: '533x' }} 533w,{%- endif -%}
               {%- if article.image.src.width >= 720 -%}{{ article.image.src | img_url: '720x' }} 720w,{%- endif -%}
               {%- if article.image.src.width >= 1000 -%}{{ article.image.src | img_url: '1000x' }} 1000w,{%- endif -%}
               {%- if article.image.src.width >= 1500 -%}{{ article.image.src | img_url: '1500x' }} 1500w,{%- endif -%}"
-            src="{{ article.image.src | img_url: '533x' }}"
+            src="{{ article.image.src | img_url: 'master' }}"
             sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
             alt="{{ article.image.src.alt | escape }}"
             width="{{ article.image.width }}"
             height="{{ article.image.height }}"
-            loading="lazy"
-            class="motion-reduce"
+            class="lazyload img-fluid"
           >
+        </a>
         </div>
       </div>
     {%- endif -%}
 
     <div class="article-card__info">
-      <header class="article-card__header">
-        <h2 class="article-card__title" id="Article-{{ article.id }}">
-          {{ article.title | escape }}
-        </h2>
-        {%- if show_date -%}
-          <span class="circle-divider caption-with-letter-spacing">
-            {{- article.published_at | time_tag: format: 'month_year' -}}
-          </span>
-        {%- endif -%}
-        {%- if show_author -%}
-          <span class="caption-with-letter-spacing">{{ article.author -}}</span>
-        {%- endif -%}
-      </header>
-      {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-        <p class="article-card__excerpt rte-width">
-          {%- if article.excerpt.size > 0 -%}
-            {{ article.excerpt | strip_html | truncatewords: 30 }}
-          {%- else -%}
-            {{ article.content | strip_html | truncatewords: 30 }}
-          {%- endif -%}
-        </p>
-      {%- endif -%}
-      <div class="article-card__footer">
-        {%- if article.comments_count > 0 and blog.comments_enabled? -%}
-          <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
-        {%- endif -%}
+      <div class="title">
+        <a href="{{ article.url }}"><h2>{{ article.title }}</h2></a>
       </div>
+      <div class="meta-blog">
+       
+          <span>
+            <img src="{{ 'author.svg' | asset_url }}" alt="author-icon">
+            {{ article.author }}
+          </span>
+       
+          <span>
+            <img src="{{ 'date.svg' | asset_url }}" alt="date-icon">
+            {{ article.published_at | time_tag: format: 'month_year' }}
+          </span>
+       
+        {%- if article.tags.size > 0 -%}
+        <span><img src="{{ 'tags.svg' | asset_url }}" alt="tags-icon">
+         
+          {%- for tag in article.tags -%}
+          {% if forloop.first == true %}
+          {%else %},{% endif %}
+              <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+             
+          {%- endfor -%}
+        </span>
+          {%- endif -%}
+      </div>
+      {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+        <div class="content-blog"> 
+          {%- if article.excerpt.size > 0 -%}
+            <p>{{ article.excerpt }}</p>
+          {%- else -%}
+        <p>{{ article.content | strip_html | truncate: 250 }}</p>
+          {%- endif -%}
+        </div>
+        <div class="blog-link text-center">
+          <a href="{{ article.url }}" class="btn btn-green">Read More</a>
+        </div>
+      {%- endif -%}
+      
     </div>
-  </a>
+
 </article>
