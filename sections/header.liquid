@@ -27,7 +27,7 @@
            </button>
            <!--  Use flexbox utility classes to change how the child elements are justified  -->
            <div class="collapse navbar-collapse justify-content-center" id="navbarToggle">
-              <ul id="menu-header-menu" class="navbar-nav m-auto">
+              <ul id="menu-header-menu" class="navbar-nav ml-auto">
              
                  {%- for link in section.settings.menu_left.links -%}
                  <li class="nav-item">
@@ -45,7 +45,7 @@
               <span class="h2">{{ shop.name }}</span>
               {%- endif -%}
               </a>
-              <ul id="menu-header-menu" class="navbar-nav m-auto">
+              <ul id="menu-header-menu" class="navbar-nav mr-auto">
                  {%- for link in section.settings.menu_right.links -%}
                  <li class="nav-item">
                  <a href="{{ link.url }}" class="{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>

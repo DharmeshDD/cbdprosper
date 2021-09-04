@@ -52,8 +52,9 @@ $('#shop-bestseller').owlCarousel({
 
 $('#customer-review').owlCarousel({
     loop:true,
-    margin:10,
+    margin:50,
     nav:true,
+    stagePadding: 200,
     responsive:{
         0:{
             items:1
@@ -62,7 +63,7 @@ $('#customer-review').owlCarousel({
             items:1
         },
         1000:{
-            items:2
+            items:1
         }
     }   
 });
@@ -156,8 +157,9 @@ $(document).ready(function() {
 });
 
 
+
 // Search
-$('.search-icon-link, .close-icon').click(function () {
+$('.search-icon-link, .search-close-icon').click(function () {
     if ($('.inputSearch').hasClass('active')) {
         $('body').removeClass('search-open');
         $('.inputSearch').hide();

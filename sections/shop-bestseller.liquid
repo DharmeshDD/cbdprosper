@@ -1,44 +1,53 @@
 <div class="bestseller-shop">
     <div class="container">
-        <div class="row">
-            <div class="heading">
-                {% if section.settings.heading-text != blank %}
-                <h2 class="text-center">{{ section.settings.heading-text }}</h2>
-                {% endif %}
-            </div>
-            {%- assign collection = collections[section.settings.collection] -%}
-            {%- assign product_limit = section.settings.grid -%}
+
+        <div class="title-black text-center">
+            {% if section.settings.heading-text != blank %}
+            <h2 class="text-center h2">{{ section.settings.heading-text }}</h2>
+            {% endif %}
+        </div>
+
+    </div>
+    {%- assign collection = collections[section.settings.collection] -%}
+    {%- assign product_limit = section.settings.grid -%}
+    <div class="bestseller-slider">
+        <div class="container-fluid-xl">
             <div class="owl-carousel owl-theme" id="shop-bestseller">
-                {% for product in collection.products limit: product_limit %}
+                {% for product in collection.products limit: 8 %}
                 <div class="item">
                     <div class="best-product">
                         <a href="{{ product.url }}">
                             <div class="product-image">
                                 {% if product.featured_image.src != null %}
-                                    <img data-id="{{ product.id }}" class="img-fluid lazyload" src="{{ product.featured_image.src | img_url: 'master' }}" alt="{{ product.title }}">      
+                                <img data-id="{{ product.id }}" class="img-fluid lazyload"
+                                    src="{{ product.featured_image.src | img_url: 'master' }}"
+                                    alt="{{ product.title }}">
                                 {% else %}
-                                     {{ 'product-1' | placeholder_svg_tag: 'card-img-top' }}
-                                {% endif %}
-                             </div>
-                       
-                        <div class="product-details">
-                            <h5>{{ product.title }}</h5>
-                            <div class="product-price">
-                                <h6><span>{{ product.compare_at_price | money }}</span></h6>
-                                {% if section.settings.show_price %}
-                                <div class="get-price">
-                                    <h6 data-id="{{ product.id }}">{{ product.price | money }}</h6>
-                                </div>
+                                {{ 'product-1' | placeholder_svg_tag: 'card-img-top' }}
                                 {% endif %}
                             </div>
-                        </div>
-                    </a>
+
+                            <div class="product-details">
+                                <h5>{{ product.title }}</h5>
+                                <div class="product-price">
+                                    <!-- <h6><span>{{ product.compare_at_price | money }}</span></h6> -->
+                                    {% if section.settings.show_price %}
+                                    <div class="get-price">
+                                        <h6 data-id="{{ product.id }}">{{ product.price | money }}</h6>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
+
     </div>
+
+
 </div>
 {% schema %}
 {
