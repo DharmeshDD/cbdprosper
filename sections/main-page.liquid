@@ -4,13 +4,12 @@
 <noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="page-width page-width--narrow">
-  <h1 class="main-page-title page-title h0">
-    {{ page.title | escape }}
-  </h1>
-  <div class="rte">
+<div class="container">
+  <div class="row">
+  <div class="col-lg-12">
     {{ page.content }}
   </div>
+</div>
 </div>
 
 {% schema %}
