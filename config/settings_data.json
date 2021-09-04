@@ -131,8 +131,8 @@
             "settings": {
               "slider-image": "shopify:\/\/shop_images\/slider3.jpg",
               "layout": "left",
-              "heading-text": "Live Your Best Life!",
-              "subheading-text": "",
+              "heading-text": "",
+              "subheading-text": "Live Your Best Life!",
               "linktext": "FAQs",
               "link": "#"
             }

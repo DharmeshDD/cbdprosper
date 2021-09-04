@@ -1,10 +1,14 @@
 {
   "sections": {
     "image_banner": {
-      "type": "image-banner"
+      "type": "image-banner",
+      "settings": {
+      }
     },
     "main": {
-      "type": "main-search"
+      "type": "main-search",
+      "settings": {
+      }
     }
   },
   "order": [
