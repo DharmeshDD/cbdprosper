@@ -1,14 +1,14 @@
 <div class="what-cbd" style="background-image: url('{{ section.settings.image | img_url:'master' }}');">
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-       <div class="col-lg-6">
+       <div class="col-lg-6 ml-auto">
            <div class="background-overlay">
-               <div class="heading">
+               <div class="title-white text-center">
                 {% if section.settings.heading != blank %}
-                <h2>{{ section.settings.heading }}</h2>
+                <h2 class="h2">{{ section.settings.heading }}</h2>
                 {% endif %}
                 </div>
-                <div class="content">
+                <div class="content text-center white">
                 {% if section.settings.text != blank %}
                 {{ section.settings.text }}
                 {% endif %}

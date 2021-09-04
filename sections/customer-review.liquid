@@ -1,6 +1,6 @@
-<div class="customer-review" style="background-image: url('{{ section.settings.bg-img | img_url:'master' }}')">
-  <div class="container" >
-      <div class="row">
+<div class="customer-review">
+  <div class="container-fluid-xl pl-0" >
+      <div class="row align-items-center">
           <div class="col-lg-7">
         {% if section.blocks != blank %}
         <div class="owl-carousel owl-theme" id="customer-review">
@@ -47,13 +47,13 @@
         {% endif %}
         
         <div class="col-lg-5">
-            <div class="heading">
+            <div class="title-black text-center">
           {% if section.settings.heading != blank %}
-            <h2>{{ section.settings.heading }}</h2>
+            <h2 class="h2">{{ section.settings.heading }}</h2>
           {% endif %}
     
           {% if section.settings.text != blank %}
-            <h3>{{ section.settings.text }}</h3>
+            <h5 class="h5">{{ section.settings.text }}</h5>
           {% endif %}
       </div>
         </div>
