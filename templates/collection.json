@@ -3,7 +3,8 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "heading": ""
+        "bg-img": "shopify:\/\/shop_images\/bg_9.jpg",
+        "heading": "SHOP"
       }
     },
     "product-grid": {
