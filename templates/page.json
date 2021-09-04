@@ -1,15 +1,20 @@
 {
-    "sections": {
-      "image_banner": {
-        "type": "image-banner"
-      },
-      "main": {
-        "type": "main-page"
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "settings": {
+        "bg-img": "shopify:\/\/shop_images\/bg.png",
+        "heading": ""
       }
     },
-    "order": [
-      "image_banner",
-      "main"
-    ]
-  }
-  
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "main"
+  ]
+}
