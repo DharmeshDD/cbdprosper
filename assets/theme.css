@@ -16,12 +16,13 @@ a:hover {
     --white: #fff;
     --fonts: #3D3D3D;
     --darkgreen: #1D9069;
-    --text18: 18px;
-    --text24: 24px;
     --applegreen: #88BD62;
     --blackish: #111111;
     --globalfonts: 'Montserrat', sans-serif;
     --titlefonts: 'Work Sans', sans-serif;
+    --text18: 18px;
+    --text24: 24px;
+    --text36: 36px;
 }
 
 .h2 {
@@ -68,6 +69,9 @@ p {
 
 .text24 {
     font-size: var(--text24);
+}
+.text36 {
+    font-size: var(--text36) !important;
 }
 /***** Common end *****/
 
@@ -133,6 +137,10 @@ p {
     font-weight: 400;
     color: var(--white);
     font-family: 'Montserrat', sans-serif;
+}
+
+.text-black {
+    color: var(--blackish) !important;
 }
 /***** Title Black End *****/
 
@@ -1254,12 +1262,117 @@ header.header .header-navbar .search-close-icon img {
 /*========================================================================================================================================================*/
 
 
-/***** About Start *****/
+/***** Breadcrumb Start *****/
 .breadcrumb {
     width: 100%;
     float: left;
-    height: 600px;
+    height: 500px;
+    display: flex;
+    align-items: center;    
+    padding-top: 80px;
+    margin: 0;
+    border-radius: 0px;
 }
-/***** About End *****/
+.breadcrumb h1 {
+    color: var(--white);
+    font-weight: 700;
+    font-family: var(--globalfonts);
+}
+/***** Breadcrumb End *****/
+
+/***** About Us Start *****/
+.about-us {
+    width: 100%;
+    float: left;
+    padding: 80px 0;
+    position: relative;
+}
+.about-us:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 800px;
+    height: 500px;
+    background: url(../assets/best-seller-bg1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.about-us:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 200px;
+    background: url(../assets/best-seller-bg2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.about-us .content {
+    padding: 0 0 0 50px;
+}
+
+.general-content {
+    width: 100%;
+    float: left;
+    padding: 80px 0;
+    position: relative;
+}
+.general-content .content {
+    position: relative;
+    z-index: 9;
+    margin: 20px 0 0 0;
+}
+.general-content::before {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/general-content-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/***** About Us End *****/
+
+
+/*========================================================================================================================================================*/
+
+
+/***** FAQ Start *****/
+.faq-accordian {
+    width: 100%;
+    float: left;
+    padding: 80px 0;
+}
+.faq-accordian .accordion {
+    width: 100%;
+    float: left;
+    padding: 50px 0 0 0;
+}
+.faq-accordian .accordion .card {
+    margin: 0 0 30px 0;
+}
+.faq-accordian .accordion .card-header {
+    background: var(--black);
+    border-radius: 0;
+}
+.faq-accordian .accordion .card-header h2 button {
+    color: var(--white);
+    font-size: var(--text24);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 0;
+}
+.faq-accordian .accordion .card-body {
+    background: var(--fonts);
+    padding: 40px 60px;
+}
+.faq-accordian .accordion .card-body p {
+    color: var(--white);
+}
+/***** FAQ End *****/
 
 .lazyload,.lazyloading{opacity:0}.lazyloaded{opacity:1;transition:opacity.1s}
