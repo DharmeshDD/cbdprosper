@@ -1,4 +1,4 @@
-<article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="article-template single-blog" itemscope itemtype="http://schema.org/BlogPosting">
  <div class="container">
         {%- if article.image -%}
             <div class="article-img" >
@@ -10,7 +10,7 @@
             </div>
         {%- endif -%}
         <div class="title" itemprop="headline">
-          <a href="{{ article.url }}"><h1>{{ article.title }}</h1></a>
+          <a href="{{ article.url }}"><h2>{{ article.title }}</h2></a>
         </div>
         <div class="meta-blog">
        

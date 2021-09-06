@@ -1,18 +1,43 @@
 {
-    "sections": {
-      "image_banner": {
-        "type": "image-banner"
-      },
-      "zigzag_content": {
-          "type": "zigzag-content"
-      },
-      "dark_content": {
-        "type": "dark-content"
-    }
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "settings": {
+        "bg-img": "shopify:\/\/shop_images\/bg_5.jpg",
+        "heading": "Product Focus and Events"
+      }
     },
-    "order": [
-      "image_banner",
-      "zigzag_content",
-      "dark_content"
-    ]
-  }  
+    "zigzag_content": {
+      "type": "zigzag-content",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/AdobeStock_211964848_1.jpg",
+        "layout": "left",
+        "heading": "Headline Goes Here",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur arcu non varius parturient massa netus purus consectetur nibh. Est leo, tristique nisl, quis eget sed ornare sed varius. Suspendisse dolor, aliquam dolor metus condimentum. Est leo, tristique nisl, quis eget sed ornare sed varius. A nulla quam suspendisse massa tortor dui. In porttitor amet, augue nunc amet. Donec cum facilisi amet suspendisse porttitor mauris tempor. Id malesuada ut blandit leo vulputate.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur arcu non varius parturient massa netus purus consectetur nibh. Suspendisse dolor, aliquam dolor metus condimentum. Est leo, tristique nisl, quis eget sed ornare sed varius. A nulla quam suspendisse massa tortor dui. In porttitor amet, augue nunc amet."
+      }
+    },
+    "dark_content": {
+      "type": "dark-content",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/bg_6.jpg",
+        "heading": "Headline Goes Here",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur arcu non varius parturient massa netus purus consectetur nibh. Est leo, tristique nisl, quis eget sed ornare sed varius. Suspendisse dolor, aliquam dolor metus condimentum. Est leo, tristique nisl, quis eget sed ornare sed varius. A nulla quam suspendisse massa tortor dui. In porttitor amet, augue nunc amet. Donec cum facilisi amet suspendisse porttitor mauris tempor. Id malesuada ut blandit leo vulputate.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur arcu non varius parturient massa netus purus consectetur nibh. Suspendisse dolor, aliquam dolor metus condimentum. Est leo, tristique nisl, quis eget sed ornare sed varius. A nulla quam suspendisse massa tortor dui. In porttitor amet, augue nunc amet."
+      }
+    },
+    "16298124225ba277ad": {
+      "type": "zigzag-content",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/AdobeStock_231355746_1.jpg",
+        "layout": "right",
+        "heading": "Headline Goes Here",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur arcu non varius parturient massa netus purus consectetur nibh. Est leo, tristique nisl, quis eget sed ornare sed varius. Suspendisse dolor, aliquam dolor metus condimentum. Est leo, tristique nisl, quis eget sed ornare sed varius. A nulla quam suspendisse massa tortor dui. In porttitor amet, augue nunc amet. Donec cum facilisi amet suspendisse porttitor mauris tempor. Id malesuada ut blandit leo vulputate.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur arcu non varius parturient massa netus purus consectetur nibh. Suspendisse dolor, aliquam dolor metus condimentum. Est leo, tristique nisl, quis eget sed ornare sed varius. A nulla quam suspendisse massa tortor dui. In porttitor amet, augue nunc amet."
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "zigzag_content",
+    "dark_content",
+    "16298124225ba277ad"
+  ]
+}

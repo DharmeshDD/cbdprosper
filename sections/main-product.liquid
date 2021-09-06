@@ -1,11 +1,8 @@
 {% comment %}theme-check-disable TemplateLength{% endcomment %}
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-<style>
-  
-</style>
-<section class="page-width">
-  <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-    <div class="grid__item product__media-wrapper">
+<section class="container">
+  <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %} row">
+    <div class="grid__item product__media-wrapper col-lg-6">
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}
         </a>
@@ -45,7 +42,7 @@
         </button>
       {%- endif -%}
     </div>
-    <div class="product__info-wrapper grid__item">
+    <div class="product__info-wrapper grid__item col-lg-6">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
@@ -134,17 +131,23 @@
                   <li>
                     <a target="_blank" href="//www.facebook.com/sharer.php?u={{ shop.url | append: share_permalink }}" class="btn btn--small btn--share share-facebook">
                       <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                      <span class="share-title" aria-hidden="true">{{ 'general.social.share_on_facebook' | t }}</span>
-                      <span class="visually-hidden">{{ 'general.social.alt_text.share_on_facebook' | t }}</span>
+                   
                     </a>
                   </li>
              
                   <li>
                     <a target="_blank" href="//twitter.com/share?text={{ share_title | url_param_escape }}&amp;url={{ shop.url | append: share_permalink }}" class="btn btn--small btn--share share-twitter">
-                      <i class="fa fa-twitter" aria-hidden="true"></i>
-                      <span class="share-title" aria-hidden="true">{{ 'general.social.share_on_twitter' | t }}</span>
-                      <span class="visually-hidden">{{ 'general.social.alt_text.share_on_twitter' | t }}</span>
+                      <i class="fa fa-instagr" aria-hidden="true"></i>
+                    
                     </a>
+                  </li>
+
+                  <li>
+                    <a target="_blank" href="//twitter.com/share?text={{ share_title | url_param_escape }}&amp;url={{ shop.url | append: share_permalink }}" class="btn btn--small btn--share share-twitter">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    
+                    </a>
+                  </li>
               
                  
 

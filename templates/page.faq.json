@@ -8,10 +8,88 @@
       }
     },
     "general_content": {
-        "type": "general-content"
+      "type": "general-content",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/bg_6_1.png",
+        "heading": "Headline Goes Here",
+        "subheading": "",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, nisi, at urna aliquet ultrices malesuada nascetur. In ut aliquam sed sagittis metus. Aenean quam scelerisque proin ut leo ut. Euismod purus ullamcorper gravida porttitor eget odio sed et a. Elementum mi non dapibus convallis tempor tortor mauris tristique fames."
+      }
     },
     "accordian": {
-        "type": "accordian"
+      "type": "accordian",
+      "blocks": {
+        "bc2fd866-7bd8-4d4e-aabb-5eb06ac8c9e7": {
+          "type": "faq_blocks",
+          "settings": {
+            "question": "What is CBD?",
+            "answer": "Cannabidiol (CBD) is one of over 100 molecules produced by the Cannabis plant, called cannabinoids. Of the cannabinoids, CBD is the most abundant making up 40% of the plant’s extract. When ingested, it acts as a plant supplement for the body’s chemical needs and can provide many health benefits."
+          }
+        },
+        "b10d805c-e043-4f2f-850b-aced59b12013": {
+          "type": "faq_blocks",
+          "settings": {
+            "question": "Is CBD legal?",
+            "answer": "Cannabidiol (CBD) is one of over 100 molecules produced by the Cannabis plant, called cannabinoids. Of the cannabinoids, CBD is the most abundant making up 40% of the plant’s extract. When ingested, it acts as a plant supplement for the body’s chemical needs and can provide many health benefits."
+          }
+        },
+        "deac308c-5bf7-47c1-9374-945a4af26867": {
+          "type": "faq_blocks",
+          "settings": {
+            "question": "What is the difference between hemp and marijuana?",
+            "answer": "Cannabidiol (CBD) is one of over 100 molecules produced by the Cannabis plant, called cannabinoids. Of the cannabinoids, CBD is the most abundant making up 40% of the plant’s extract. When ingested, it acts as a plant supplement for the body’s chemical needs and can provide many health benefits."
+          }
+        },
+        "93082eb1-03de-4158-83e3-9b16fe4b2fe6": {
+          "type": "faq_blocks",
+          "settings": {
+            "question": "What is CBD oil?",
+            "answer": "Cannabidiol (CBD) is one of over 100 molecules produced by the Cannabis plant, called cannabinoids. Of the cannabinoids, CBD is the most abundant making up 40% of the plant’s extract. When ingested, it acts as a plant supplement for the body’s chemical needs and can provide many health benefits."
+          }
+        },
+        "67b7389d-a443-423a-a230-26af80c9c61b": {
+          "type": "faq_blocks",
+          "settings": {
+            "question": "How should I store my CBD?",
+            "answer": "Cannabidiol (CBD) is one of over 100 molecules produced by the Cannabis plant, called cannabinoids. Of the cannabinoids, CBD is the most abundant making up 40% of the plant’s extract. When ingested, it acts as a plant supplement for the body’s chemical needs and can provide many health benefits."
+          }
+        },
+        "242a002d-0117-4786-b72f-30b7491c59c0": {
+          "type": "faq_blocks",
+          "settings": {
+            "question": "Will I fail a drug test if I use CBD?",
+            "answer": "Cannabidiol (CBD) is one of over 100 molecules produced by the Cannabis plant, called cannabinoids. Of the cannabinoids, CBD is the most abundant making up 40% of the plant’s extract. When ingested, it acts as a plant supplement for the body’s chemical needs and can provide many health benefits."
+          }
+        },
+        "e32f3217-66f7-49b0-866e-98f4fcf4e600": {
+          "type": "faq_blocks",
+          "settings": {
+            "question": "Will I get high from using CBD?",
+            "answer": "Cannabidiol (CBD) is one of over 100 molecules produced by the Cannabis plant, called cannabinoids. Of the cannabinoids, CBD is the most abundant making up 40% of the plant’s extract. When ingested, it acts as a plant supplement for the body’s chemical needs and can provide many health benefits."
+          }
+        },
+        "1cbee872-7f9a-4046-ad0d-a3b8dfd1f3a6": {
+          "type": "faq_blocks",
+          "settings": {
+            "question": "Why CBD?",
+            "answer": "Cannabidiol (CBD) is one of over 100 molecules produced by the Cannabis plant, called cannabinoids. Of the cannabinoids, CBD is the most abundant making up 40% of the plant’s extract. When ingested, it acts as a plant supplement for the body’s chemical needs and can provide many health benefits."
+          }
+        }
+      },
+      "block_order": [
+        "bc2fd866-7bd8-4d4e-aabb-5eb06ac8c9e7",
+        "b10d805c-e043-4f2f-850b-aced59b12013",
+        "deac308c-5bf7-47c1-9374-945a4af26867",
+        "93082eb1-03de-4158-83e3-9b16fe4b2fe6",
+        "67b7389d-a443-423a-a230-26af80c9c61b",
+        "242a002d-0117-4786-b72f-30b7491c59c0",
+        "e32f3217-66f7-49b0-866e-98f4fcf4e600",
+        "1cbee872-7f9a-4046-ad0d-a3b8dfd1f3a6"
+      ],
+      "settings": {
+        "heading-text": "Frequently Asked Questions",
+        "bg-img": "shopify:\/\/shop_images\/bg.jpg"
+      }
     }
   },
   "order": [

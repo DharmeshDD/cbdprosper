@@ -1,18 +1,79 @@
 {
-    "sections": {
-      "image_banner": {
-        "type": "image-banner"
-      },
-      "general_content": {
-          "type": "general-content"
-      },
-      "our_service": {
-        "type": "ourservices"
-    }
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "settings": {
+        "bg-img": "shopify:\/\/shop_images\/AdobeStock_332305582_1.jpg",
+        "heading": "Our Services"
+      }
     },
-    "order": [
-      "image_banner",
-      "general_content",
-      "our_service"
-    ]
-  }
+    "general_content": {
+      "type": "general-content",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/bg_2.png",
+        "heading": "Headline Goes Here",
+        "subheading": "",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, nisi, at urna aliquet ultrices malesuada nascetur. In ut aliquam sed sagittis metus. Aenean quam scelerisque proin ut leo ut. Euismod purus ullamcorper gravida porttitor eget odio sed et a. Elementum mi non dapibus convallis tempor tortor mauris tristique fames."
+      }
+    },
+    "our_service": {
+      "type": "ourservices",
+      "blocks": {
+        "213882cf-5db8-4a42-8cd5-d30946c29da4": {
+          "type": "image-section",
+          "settings": {
+            "logo-image": "shopify:\/\/shop_images\/AdobeStock_300338769_1.jpg",
+            "heading": "Subscription Services",
+            "button_label": "",
+            "button_link": "",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A proin facilisis bibendum neque ullamcorper. Tempor nulla eget pellentesque accumsan nisl facilisis. Arcu ac faucibus nisl dui, et augue. Ultrices feugiat eget turpis dui. Quam pulvinar pretium pretium donec duis erat mattis non congue. Molestie suspendisse eget aenean ut nunc. Felis sit posuere non nulla. At mattis quam bibendum eget tellus. Mi sit nec eget ultricies phasellus facilisis nec ut commodo. Lacus."
+          }
+        },
+        "45a953aa-a294-4ea2-9a0f-dc4d3ec7775d": {
+          "type": "image-section",
+          "settings": {
+            "logo-image": "shopify:\/\/shop_images\/AdobeStock_343005954_1.jpg",
+            "heading": "Home Delivery",
+            "button_label": "Coming Soon",
+            "button_link": "",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A proin facilisis bibendum neque ullamcorper. Tempor nulla eget pellentesque accumsan nisl facilisis. Arcu ac faucibus nisl dui, et augue. Ultrices feugiat eget turpis dui. Quam pulvinar pretium pretium donec duis erat mattis non congue. Molestie suspendisse eget aenean ut nunc. Felis sit posuere non nulla. At mattis quam bibendum eget tellus. Mi sit nec eget ultricies phasellus facilisis nec ut commodo. Lacus."
+          }
+        },
+        "722dfba8-9720-4627-a554-18bc04900f7e": {
+          "type": "image-section",
+          "settings": {
+            "logo-image": "shopify:\/\/shop_images\/AdobeStock_434506041_1.jpg",
+            "heading": "Curbside Pick-up",
+            "button_label": "",
+            "button_link": "",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A proin facilisis bibendum neque ullamcorper. Tempor nulla eget pellentesque accumsan nisl facilisis. Arcu ac faucibus nisl dui, et augue. Ultrices feugiat eget turpis dui. Quam pulvinar pretium pretium donec duis erat mattis non congue. Molestie suspendisse eget aenean ut nunc. Felis sit posuere non nulla. At mattis quam bibendum eget tellus. Mi sit nec eget ultricies phasellus facilisis nec ut commodo. Lacus."
+          }
+        },
+        "69701c6b-198e-4bce-acf2-28a40d276fa9": {
+          "type": "image-section",
+          "settings": {
+            "logo-image": "shopify:\/\/shop_images\/AdobeStock_274669325_1.jpg",
+            "heading": "Rolling Services",
+            "button_label": "",
+            "button_link": "",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A proin facilisis bibendum neque ullamcorper. Tempor nulla eget pellentesque accumsan nisl facilisis. Arcu ac faucibus nisl dui, et augue. Ultrices feugiat eget turpis dui. Quam pulvinar pretium pretium donec duis erat mattis non congue. Molestie suspendisse eget aenean ut nunc. Felis sit posuere non nulla. At mattis quam bibendum eget tellus. Mi sit nec eget ultricies phasellus facilisis nec ut commodo. Lacus."
+          }
+        }
+      },
+      "block_order": [
+        "213882cf-5db8-4a42-8cd5-d30946c29da4",
+        "45a953aa-a294-4ea2-9a0f-dc4d3ec7775d",
+        "722dfba8-9720-4627-a554-18bc04900f7e",
+        "69701c6b-198e-4bce-acf2-28a40d276fa9"
+      ],
+      "settings": {
+        "bg-img": "shopify:\/\/shop_images\/bg.jpg"
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "general_content",
+    "our_service"
+  ]
+}

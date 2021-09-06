@@ -1,13 +1,73 @@
 {
   "sections": {
     "image_banner": {
-      "type": "image-banner"
+      "type": "image-banner",
+      "settings": {
+        "bg-img": "shopify:\/\/shop_images\/bg_7.jpg",
+        "heading": ""
+      }
     },
     "contact_information": {
-      "type": "contact-information"
+      "type": "contact-information",
+      "blocks": {
+        "ac29f7a2-25e8-4487-88d4-ea62bd955a67": {
+          "type": "select",
+          "settings": {
+            "heading": "Allen",
+            "address": "<p>\n975 SH 121<br>\nSuite 175<br>\nAllen, TX 75013<\/p>",
+            "phno": "469.501.5219",
+            "gmail": "allen@cbdplusgold.com",
+            "button_label": "Get directions",
+            "button_link": "#",
+            "other-heading": "Office Hours",
+            "other-text": "<ul>\n<li>Monday: 12:00 pm - 8:00 pm<\/li>\n<li>Tuesday: 12:00 pm - 8:00 pm<\/li>\n<li>Wednesday: 12:00 pm - 8:00 pm<\/li>\n<li>Thursday: 10:00 am - 8:00 pm<\/li>\n<li>Friday: 10:00 am - 8:00 pm<\/li>\n<li>Saturday: 10:00 am - 8:00 pm<\/li>\n<li>Sunday: 12:00 pm - 5:00 pm<\/li>\n<\/ul>",
+            "map": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3340.688932858551!2d-96.68148468480858!3d33.14353588086281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c173014ea56eb%3A0xc93a4f006c1962bc!2sWing%20Snob!5e0!3m2!1sen!2sin!4v1629813084235!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"><\/iframe>"
+          }
+        },
+        "83f354ae-1044-4796-aa01-bad6f6b05a48": {
+          "type": "select",
+          "settings": {
+            "heading": "McKinney",
+            "address": "<p>\n6091 W. University Dr.<br>\nSuite 106<br>\nMcKinney, TX 75071<\/p>",
+            "phno": "972.454.4759",
+            "gmail": "mckinney@cbdplusgold.com",
+            "button_label": "Get directions",
+            "button_link": "#",
+            "other-heading": "Office Hours",
+            "other-text": "<ul>\n<li>Monday: 12:00 pm - 8:00 pm<\/li>\n<li>Tuesday: 12:00 pm - 8:00 pm<\/li>\n<li>Wednesday: 12:00 pm - 8:00 pm<\/li>\n<li>Thursday: 10:00 am - 8:00 pm<\/li>\n<li>Friday: 10:00 am - 8:00 pm<\/li>\n<li>Saturday: 10:00 am - 8:00 pm<\/li>\n<li>Sunday: 12:00 pm - 5:00 pm<\/li>\n<\/ul>",
+            "map": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3337.854951272998!2d-96.69775448480667!3d33.21789868084121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c14f761c77b8f%3A0x9ccd9e9db2c31aa2!2s6091%20W%20University%20Dr%20%23106%2C%20McKinney%2C%20TX%2075071%2C%20USA!5e0!3m2!1sen!2sin!4v1629813246497!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"><\/iframe>"
+          }
+        },
+        "03744bd5-edb1-474d-8b67-26576b7309ae": {
+          "type": "select",
+          "settings": {
+            "heading": "Prosper",
+            "address": "<p>\n2111 E. University Dr.<br>\nSuite 40<br>\nProsper, TX 75078<\/p>",
+            "phno": "214.396.9800",
+            "gmail": "prosper@cbdplusgold.com",
+            "button_label": "Get directions",
+            "button_link": "#",
+            "other-heading": "Office Hours",
+            "other-text": "<ul>\n<li>Monday: 12:00 pm - 8:00 pm<\/li>\n<li>Tuesday: 12:00 pm - 8:00 pm<\/li>\n<li>Wednesday: 12:00 pm - 8:00 pm<\/li>\n<li>Thursday: 10:00 am - 8:00 pm<\/li>\n<li>Friday: 10:00 am - 8:00 pm<\/li>\n<li>Saturday: 10:00 am - 8:00 pm<\/li>\n<li>Sunday: 12:00 pm - 5:00 pm<\/li>\n<\/ul>",
+            "map": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3337.7982507462752!2d-96.77488498480663!3d33.21938498084068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3fb797042e3d%3A0xbcbae04ba8056d75!2s2111%20E%20University%20Dr%20%2340%2C%20Prosper%2C%20TX%2075078%2C%20USA!5e0!3m2!1sen!2sin!4v1629813349428!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"><\/iframe>"
+          }
+        }
+      },
+      "block_order": [
+        "ac29f7a2-25e8-4487-88d4-ea62bd955a67",
+        "83f354ae-1044-4796-aa01-bad6f6b05a48",
+        "03744bd5-edb1-474d-8b67-26576b7309ae"
+      ],
+      "settings": {
+      }
     },
     "form": {
-      "type": "contact-form"
+      "type": "contact-form",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "text": ""
+      }
     }
   },
   "order": [

@@ -1,18 +1,18 @@
-<div class="about-us">
+<div class="about-us pattern-add">
   
-         {% capture image_layout %}
+         {% capture image_layout %} 
         <div class="col-lg-4">
             <div class="new-img">
                 {%- if section.settings.image != blank -%}
                     <img src="{{ section.settings.image | img_url : 'master' }}" class="img-fluid">
                 {% else %}
                     {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-                {%- endif -%}
+                {%- endif -%} 
             </div>
         </div>
         {% endcapture %}
         <div class="container" >
-         <div class="row align-items-center"> 
+         <div class="row align-items-center">
 			{% if section.settings.layout == 'left' %}
             	{{ image_layout }}
         	{% endif %}
@@ -37,7 +37,8 @@
 {
    "name":"Image with text",
    "settings":[
-      {         
+      {
+         "id":"background_image",
          "type":"image_picker",
          "label":"Background image"
       },

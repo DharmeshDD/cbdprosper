@@ -1,11 +1,11 @@
-
-<div class="contact-us">
-  <div class="container">
+<div class="contact-us pattern-add">
+  <div class="container-fluid-xl">
 
     <ul class="nav nav-tabs" role="tablist">
       {% for block in section.blocks %}
       <li class="nav-item">
-        <a class="nav-link {% if forloop.index == 1 %} active {% endif %}" data-toggle="tab" href="#tabs-{{forloop.index}}" role="tab">{{ block.settings.heading }}</a>
+        <a class="nav-link {% if forloop.index == 1 %} active {% endif %}" data-toggle="tab"
+          href="#tabs-{{forloop.index}}" role="tab">{{ block.settings.heading }}</a>
       </li>
       {% endfor %}
     </ul>
@@ -14,71 +14,82 @@
       <div class="tab-pane {% if forloop.index == 1 %} active {% endif %}" id="tabs-{{forloop.index}}" role="tabpanel">
         <div class="row">
           <div class="col-lg-6">
-          <div class="row">
-          <div class="col-lg-12"> <h2>Contact Information</h2></div>
-          </div>
-          <div class="row">
-          <div class="col-lg-6">
-            <div class="heading">
-             
-              {% if block.settings.heading != blank %}
-                <h6><i class="fa fa-map-marker" aria-hidden="true"></i>{{ block.settings.heading }}</h6>
-              {% endif %}
-                {% if block.settings.address != blank %}
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="title-black icon-left">
+                  <h2 class="h2">Contact Information</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="ct-info">
+
+                  {% if block.settings.heading != blank %}
+                  <h6><img data-src="{{ 'pin.svg' | asset_url }}" alt="Pin" class="lazyload whiteicon">{{
+                    block.settings.heading }}</h6>
+                  {% endif %}
+                  {% if block.settings.address != blank %}
                   <div class="address-detail">
                     <p>{{ block.settings.address }}</p>
                   </div>
-                {% endif %}
-            </div>
+                  {% endif %}
+                </div>
 
-            {% if block.settings.button_label != blank %}
-            <div class="btn-direction"> 
-              <a class="btn btn-primary" href="{{ block.settings.button_link }}">{{ block.settings.button_label }}</a>
-            </div>
-            {% endif %}
-          </div>
-            <div class="col-lg-6">
+                {% if block.settings.button_label != blank %}
+                <div class="btn-direction">
+                  <a class="btn-custom btn-green" href="{{ block.settings.button_link }}"> <span>{{
+                      block.settings.button_label }}</span></a>
+                </div>
+                {% endif %}
+              </div>
+              <div class="col-lg-6">
                 {% if block.settings.phno != blank %}
+                <div class="ct-info">
                   <div class="phn">
                     <a href="tel:{{ block.settings.phno }}">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                    <span>{{ block.settings.phno }}</span>
-                  </a>
+                      <img data-src="{{ 'phone-green.svg' | asset_url }}" alt="Phone" class="lazyload whiteicon">
+                      <span>{{ block.settings.phno }}</span>
+                    </a>
                   </div>
-                {% endif %}
-                {% if block.settings.gmail != blank %}
+                  {% endif %}
+                  {% if block.settings.gmail != blank %}
                   <div class="email-detail">
                     <a href="mailto:{{ block.settings.gmail }}">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <span>{{ block.settings.gmail }}</span>
-                  </a>
+                      <img data-src="{{ 'email-green.svg' | asset_url }}" alt="Email" class="lazyload whiteicon">
+                      <span>{{ block.settings.gmail }}</span>
+                    </a>
                   </div>
-                {% endif %}
+                  {% endif %}
+                </div>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="oh-info">
+                  <div class="heading">
+                    {% if block.settings.other-heading != blank %}
+                    <h3>{{ block.settings.other-heading }}</h3>
+                    {% endif %}
+                  </div>
+                  <div class="content">
+                    {% if block.settings.other-text != blank %}
+                    <p>{{ block.settings.other-text }}</p>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="row">
-          <div class="col-lg-12">
-            <div class="heading">
-              {% if block.settings.other-heading != blank %}
-                <h1>{{ block.settings.other-heading }}</h1>
-              {% endif %}
-            </div>
-            <div class="content">
-              {% if block.settings.other-text != blank %}
-                <p>{{ block.settings.other-text }}</p>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-        </div>
-          
-        <div class="col-lg-6">
-          {% if block.settings.map != blank %}
+
+          <div class="col-lg-6">
+            {% if block.settings.map != blank %}
             {{ block.settings.map }}
-          {% endif %}
-         
-        </div>
-  
+            {% endif %}
+
+          </div>
+
         </div>
       </div>
       {% endfor %}
@@ -93,69 +104,69 @@
 
 {% schema %}
 {
-  "name": "Contact us",
-  "settings": [
-      {
-          "id": "bg-img",
-          "type": "image_picker",
-          "label": "Image"
-      }
-  ],
-  "blocks":[
-      {
-            "name":"contact blocks",
-            "type":"select",
-            "settings":[
-                {
-                  "id": "heading",
-                  "type": "text",
-                  "label": "Heading"
-                },
-                {
-                  "id": "address",
-                  "type": "html",
-                  "label": "Address"
-                },
-                {
-                  "id": "phno",
-                  "type": "text",
-                  "label": "Contact Number"
-                },
-                {
-                  "id": "gmail",
-                  "type": "text",
-                  "label": "Gmail"
-                },
-                {
-                  "id":"button_label",
-                  "type":"text",
-                  "label":"Button label"
-                },
-                {
-                  "id":"button_link",
-                  "type":"url",
-                  "label":"Button link"
-                },
-                {
-                  "id": "other-heading",
-                  "type": "text",
-                  "label": "Heading",
-                  "default":"Office Hours"
-                },
-                {
-                  "id": "other-text",
-                  "type": "html",
-                  "label": "Hours"
-                },
-                {
-                  "id":"map",
-                  "type":"text",
-                  "label":"Map Address Link"
-                }
-            ]
-      }
-  ]
-  
+"name": "Contact us",
+"settings": [
+{
+"id": "bg-img",
+"type": "image_picker",
+"label": "Image"
 }
-  
+],
+"blocks":[
+{
+"name":"contact blocks",
+"type":"select",
+"settings":[
+{
+"id": "heading",
+"type": "text",
+"label": "Heading"
+},
+{
+"id": "address",
+"type": "html",
+"label": "Address"
+},
+{
+"id": "phno",
+"type": "text",
+"label": "Contact Number"
+},
+{
+"id": "gmail",
+"type": "text",
+"label": "Gmail"
+},
+{
+"id":"button_label",
+"type":"text",
+"label":"Button label"
+},
+{
+"id":"button_link",
+"type":"url",
+"label":"Button link"
+},
+{
+"id": "other-heading",
+"type": "text",
+"label": "Heading",
+"default":"Office Hours"
+},
+{
+"id": "other-text",
+"type": "html",
+"label": "Hours"
+},
+{
+"id":"map",
+"type":"text",
+"label":"Map Address Link"
+}
+]
+}
+]
+
+}
+
 {% endschema %}

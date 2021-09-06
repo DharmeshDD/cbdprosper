@@ -1,100 +1,105 @@
-
-<div class="feature_blog">
+<div class="feature_blog pattern-add">
   <div class="container">
-      <div class="row">
-          {%- for article in blog.articles limit: 1 -%}
-          <div class="col-lg-4">
-            <a href="{{ article.url }}">
-              {%- if article.image -%}
-              <img data-src="{{ article | img_url: 'master'}}" alt="{{ article.title }}" class="lazyload img-fluid">
-                
-              {%- endif -%}
-            
-            </a>
-            
-          </div>
-      <div class="col-lg-8">
-        
-          <div class="title">
-            <a href="{{ article.url }}"><h2>{{ article.title }}</h2></a>
-          </div>
-          <div class="meta-blog">
-           
-              <span>
-                <img data-src="{{ 'author.svg' | asset_url }}" alt="author-icon" class="lazyload img-fluid">
-                {{ article.author }}
-              </span>
-          
-    
-            {%- if section.settings.blog_show_date -%}
-              <span>
-                <img data-src="{{ 'date.svg' | asset_url }}" alt="date-icon" class="lazyload img-fluid">
-                {{ article.published_at | time_tag: format: 'month_year' }}
-              </span>
+    <div class="row align-items-center">
+      {%- for article in blog.articles limit: 1 -%}
+      <div class="col-lg-5">
+        <div class="image">
+          <a href="{{ article.url }}">
+            {%- if article.image -%}
+            <img data-src="{{ article | img_url: 'master'}}" alt="{{ article.title }}" class="lazyload img-fluid">
+
             {%- endif -%}
-            {%- if article.tags.size > 0 -%}
-            <span><img data-src="{{ 'tags.svg' | asset_url }}" alt="tags-icon" class="lazyload img-fluid">
-             
-              {%- for tag in article.tags -%}
-              {% if forloop.first == true %}
-              {%else %},{% endif %}
-                  <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
-                 
-              {%- endfor -%}
-            </span>
-              {%- endif -%}
-          </div>
-          <div class="content-blog"> 
-            {%- if article.excerpt.size > 0 -%}
-              <p>{{ article.excerpt }}</p>
-            {%- else -%}
-          <p>{{ article.content | strip_html | truncate: 250 }}</p>
-            {%- endif -%}
-          </div>
-        
-          </div>
-        {%- endfor -%}
+
+          </a>
+        </div>
+
       </div>
+      <div class="col-lg-7">
+
+        <div class="title">
+          <a href="{{ article.url }}">
+            <h2>{{ article.title }}</h2>
+          </a>
+        </div>
+        <div class="meta-blog">
+
+          <span>
+            <img data-src="{{ 'author.svg' | asset_url }}" alt="author-icon" class="lazyload img-fluid">
+            {{ article.author }}
+          </span>
+
+
+          {%- if section.settings.blog_show_date -%}
+          <span>
+            <img data-src="{{ 'date.svg' | asset_url }}" alt="date-icon" class="lazyload img-fluid">
+            {{ article.published_at | time_tag: format: 'month_year' }}
+          </span>
+          {%- endif -%}
+          {%- if article.tags.size > 0 -%}
+          <span><img data-src="{{ 'tags.svg' | asset_url }}" alt="tags-icon" class="lazyload img-fluid">
+
+            {%- for tag in article.tags -%}
+            {% if forloop.first == true %}
+            {%else %},{% endif %}
+            <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+
+            {%- endfor -%}
+          </span>
+          {%- endif -%}
+        </div>
+        <div class="content-blog">
+          <div class="content">
+            {%- if article.excerpt.size > 0 -%}
+            <p>{{ article.excerpt }}</p>
+            {%- else -%}
+            <p>{{ article.content | strip_html | truncate: 250 }}</p>
+            {%- endif -%}
+          </div>
+        </div>
+
+      </div>
+      {%- endfor -%}
+    </div>
   </div>
-  
-  </div>
-  
-  
-  
-  {% schema %}
-  {
-    "name": "Blog posts",
-    "class": "index-section",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Heading",
-        "default": "Blog posts"
-      },
-      {
-        "id": "blog",
-        "type": "blog",
-        "label": "Blog"
-      },
-      {
-        "type": "checkbox",
-        "id": "blog_show_author",
-        "label": "Show author",
-        "default": false
-      },
-      {
-        "type": "checkbox",
-        "id": "blog_show_date",
-        "label": "Show date",
-        "default": true
-      }
-    ],
-    "presets": [
-      {
-        "name": "Blog posts",
-        "category": "Blog"
-      }
-    ]
-  }
-  {% endschema %}
+
+</div>
+
+
+
+{% schema %}
+{
+"name": "Blog posts",
+"class": "index-section",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "Blog posts"
+},
+{
+"id": "blog",
+"type": "blog",
+"label": "Blog"
+},
+{
+"type": "checkbox",
+"id": "blog_show_author",
+"label": "Show author",
+"default": false
+},
+{
+"type": "checkbox",
+"id": "blog_show_date",
+"label": "Show date",
+"default": true
+}
+],
+"presets": [
+{
+"name": "Blog posts",
+"category": "Blog"
+}
+]
+}
+{% endschema %}

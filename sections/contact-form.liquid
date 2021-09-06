@@ -1,13 +1,13 @@
-<div class="contact-page" style="background-image: url('{{ section.settings.bg-img | img_url:'master' }}');background-size: cover;">
+<div class="contact-page green-bg-add bg-gray">
   <div class="container">
      <div class="row">
         <div class="col-lg-12">
-           <div class="heading text-center">
+           <div class="title-black text-center">
               {% if section.settings.heading != blank %}
-              <h4>{{ section.settings.heading }}</h4>
+              <h5 class="h5 text-black">{{ section.settings.heading }}</h5>
               {% endif %}
               {% if section.settings.subheading != blank %}
-              <h1>{{ section.settings.subheading }}</h1>
+              <h2 class="h2">{{ section.settings.subheading }}</h2>
               {% endif %}
               {% if section.settings.text != blank %}
               <p>{{ section.settings.text }}</p>
@@ -34,14 +34,12 @@
         <div class="contact__fields row">
            <div class="col-lg-6">
               <div class="field">
-                 <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">
-                 <label class="field__label" for="ContactForm-name">First Name</label>
+                 <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">                 
               </div>
            </div>
            <div class="col-lg-6">
             <div class="field">
-               <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">
-               <label class="field__label" for="ContactForm-name">Last Name</label>
+               <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">               
             </div>
          </div>
            <div class="col-lg-12">
@@ -62,7 +60,7 @@
                  {% endif %}
                  placeholder="{{ 'templates.contact.form.email' | t }}"
                  >
-                 <label class="field__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+                 
                  {%- if form.errors contains 'email' -%}
                  <small class="contact__field-error" id="ContactForm-email-error">
                  <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
@@ -81,12 +79,11 @@
                     placeholder="{{ 'templates.contact.form.comment' | t }}"
                     >
                  {{- form.body -}}
-                 </textarea>
-                 <label class="form__label field__label" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label>
+                 </textarea>                 
               </div>
            </div>
-           <div class="col-lg-12">
-              <div class="contact__button">
+           <div class="col-lg-12 text-center">
+              <div class="contact__button btn-green">
                  <button type="submit" class="button">
                  {{ 'templates.contact.form.send' | t }}
                  </button>
