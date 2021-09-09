@@ -12,6 +12,7 @@
     "social_google_link": "https:\/\/google.com\/shopify",
     "social_facebook_link": "https:\/\/facebook.com\/shopify",
     "social_instagram_link": "https:\/\/facebook.com\/shopify",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -150,7 +151,6 @@
       "16297890975b8f1690": {
         "type": "about-cbd",
         "settings": {
-          "bg-img": "shopify:\/\/shop_images\/About-cbd.jpg",
           "heading": "About CBD Plus USA",
           "sub-heading": "in Allen, McKinney, and Prosper",
           "text": "<p>Our knowledgeable and warm staff at CBD Plus USA in Allen, McKinney, and Prosper can guide you to alternative, over the counter, non-narcotic health solutions for symptoms associated with anxiety, pain, inflammation, diabetes, and more. If you seek to supplement your lifestyle and regimen with additional relief and support, we can help you find the CBD product that will best benefit you.<\/p>\n\n<p>CBD Plus USA in Allen, McKinney, and Prosper are Collin County’s best local source for safe, natural relief. Our products can be traced from seed to sale. This farm-to-table approach gives us the unique ability to consistently offer the highest quality products at the best available prices.<\/p>\n\n<p><b>Visit us today to see what CBD can do for you – you have nothing to lose but discomfort!<\/b><\/p>"
