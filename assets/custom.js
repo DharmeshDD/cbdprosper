@@ -44,6 +44,9 @@ $('#shop-bestseller').owlCarousel({
         600:{
             items:1
         },
+        992:{
+            items:2
+        },
         1000:{
             items:4
         }
@@ -57,17 +60,65 @@ $('#customer-review').owlCarousel({
     stagePadding: 200,
     responsive:{
         0:{
+            items:1,
+            stagePadding: 0
+        },
+        600:{
+            items:1,
+            stagePadding: 0
+        },
+        768:{
+            items:1,
+            stagePadding: 100
+        },
+        992:{
+            items:1,
+            stagePadding: 90
+        },
+        1000:{
+            items:1,            
+        },
+        1200:{
+            items:1,
+            margin: 20,
+            stagePadding: 90
+        },
+        1366:{
+            items:1,
+            margin: 20,
+            stagePadding: 120
+        }
+    }   
+});
+
+$('#cbd-use-slider').owlCarousel({
+    loop:true,
+    margin:50,
+    nav:true,
+    touchDrag  : false,
+    mouseDrag  : false,
+    responsive:{
+        0:{
             items:1
         },
         600:{
             items:1
         },
+        992:{
+            items:2
+        },
         1000:{
-            items:1
+            items:5
+        },
+        1200:{
+            items:5,
+            margin: 20,            
+        },
+        1366:{
+            items:5,            
         }
     }   
 });
-
 
 
 $(".phoneno").click(function(){
@@ -102,6 +153,7 @@ $(document).ready(function() {
             items: slidesPerPage,
             dots: true,
             nav: true,
+            margin: 20,
             smartSpeed: 200,
             slideSpeed: 500,
             slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
@@ -176,6 +228,10 @@ $('.search-icon-link, .search-close-icon').click(function () {
 
 $('.close-icon-mobile a').click(function (){
     $('.mobile-search').toggleClass('active');
+})
+
+$('#SortBy').click(function (){
+    $('#SortBy').toggleClass('select-active');
 })
 
 // Header Height 

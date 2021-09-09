@@ -2,7 +2,7 @@
 <header class="header style1">
   <div class="header-navbar">
      <div class="container-fluid">
-        <nav class="navbar navbar-expand-md navbar-dark">
+        <nav class="navbar navbar-expand-xl navbar-dark">
           <div class="phoneno">
            <a href="#">
             <img data-src="{{ 'phone-white.svg' | asset_url }}" alt="Phone" class="lazyload whiteicon">
@@ -27,6 +27,7 @@
            </button>
            <!--  Use flexbox utility classes to change how the child elements are justified  -->
            <div class="collapse navbar-collapse justify-content-center" id="navbarToggle">
+             
               <ul id="menu-header-menu" class="navbar-nav ml-auto">
              
                  {%- for link in section.settings.menu_left.links -%}
@@ -54,14 +55,15 @@
                 </li>
                  {%- endfor -%}
               </ul>
-           </div>
+           
+          </div>
 
            <div class="search-sec">
             <div class="search float-right">
               <div class="search-icon">
                   <a class="search-icon-link" href="javascript:void(0)">
-                      <img data-src="{{ 'search-white.svg' | asset_url }}" class="lazyload searchdefault" alt="Search" >
-                      <img data-src="{{ 'search-active.svg' | asset_url }}" class="lazyload search_active_icon" alt="Search Active Icon" >
+                      <img src="{{ 'search-white.svg' | asset_url }}" class="searchdefault" alt="Search" >
+                      <img src="{{ 'search-active.svg' | asset_url }}" class="search_active_icon" alt="Search Active Icon" >
                   </a>
               </div>
               <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form navbar-form">

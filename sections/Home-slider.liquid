@@ -2,8 +2,8 @@
   <div class="owl-carousel owl-theme" id="home-slider">
     {% for block in section.blocks %}
 
-      <div class="item" role="region" aria-label="{{ block.settings.heading-text }}" style="background-image: url('{{ block.settings.slider-image | img_url:'master' }}')">
-
+      <div class="item" role="region" aria-label="{{ block.settings.heading-text }}" style="background-image: url('{{ block.settings.slider-image | img_url:'master' }}')">   
+        <img data-src="{{ block.settings.slider-image-mobile | img_url:'master' }}" class="mobile-image lazyload">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -43,6 +43,11 @@
                     "id":"slider-image",
                     "label":"Images"
                 },
+                {
+                  "type":"image_picker",
+                  "id":"slider-image-mobile",
+                  "label":"Mobile Image"
+              },
                 {
                   "type": "select",
                   "id": "layout",

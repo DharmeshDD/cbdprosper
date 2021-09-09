@@ -7,7 +7,8 @@
 }
 </style>
 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-<div class="container">
+<div class="shop-main pattern-add">
+<div class="container-fluid-xl">
 <div class="page-width collection-filters" id="main-collection-filters" data-id="{{ section.id }}">
   {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
     {%- assign total_active_values = 0 -%}
@@ -191,8 +192,7 @@
 
           {%- if section.settings.enable_sorting -%}
             <div class="collection-filters__item sorting caption">
-              <div class="collection-filters__field">
-                <label class="collection-filters__label caption-large" for="SortBy">{{ 'sections.collection_template.sort_by_label' | t }}</label>
+              <div class="collection-filters__field">                
                 <div class="select">
                   {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
                   <select name="sort_by" class="collection-filters__sort select__select caption-large" id="SortBy" aria-describedby="a11y-refresh-page-message">
@@ -478,9 +478,9 @@
       <div class="collection page-width">
         <div class="loading-overlay"></div>
 
-        <div  id="main-collection-product-grid" data-id="{{ section.id }}" class="row">
+        <div  id="main-collection-product-grid" data-id="{{ section.id }}" class="row shopmain-grid">
           {%- for product in collection.products -%}
-            <div class="col-lg-3 ">
+            <div class="col-lg-3 col-md-6">
               {% render 'product-card', product_card_product: product, media_size: section.settings.image_ratio, show_secondary_image: section.settings.show_secondary_image, add_image_padding: section.settings.add_image_padding, show_vendor: section.settings.show_vendor, show_image_outline: section.settings.show_image_outline %}
             </div>
           {%- endfor -%}
@@ -494,7 +494,8 @@
     {%- endif -%}
   {%- endpaginate -%}
 </div>
-
+</div>
+</div>
 {% schema %}
 {
   "name": "t:sections.main-collection-product-grid.name",

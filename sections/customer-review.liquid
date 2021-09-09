@@ -7,19 +7,19 @@
           {% for block in section.blocks %}
           <div class="item">
               {% if block.settings.rating == '1' %}
-                <img src="/assets/1star.png" alt="star-icon">
+                <img src="{{ 'star-1.svg' | asset_url }}" alt="star-icon">
   
               {% elsif block.settings.rating == '2' %}
-              <img src="/assets/2star.png" alt="star-icon">
+              <img src="{{ 'star-2.svg' | asset_url }}" alt="star-icon">
   
               {% elsif block.settings.rating == '3' %}
-              <img src="/assets/3star.png" alt="star-icon">
+              <img src="{{ 'star-3.svg' | asset_url }}" alt="star-icon">
   
               {% elsif block.settings.rating == '4' %}
-              <img src="/assets/4star.png" alt="star-icon">
+              <img src="{{ 'star-4.svg' | asset_url }}" alt="star-icon">
   
               {% elsif block.settings.rating == '5' %}
-              <img src="{{ 'stars.svg' | asset_url }}" alt="star-icon">
+              <img src="{{ 'star-5.svg' | asset_url }}" alt="star-icon">
   
               {% else %}
                 

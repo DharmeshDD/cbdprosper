@@ -33,7 +33,7 @@
       {% else %}
       <div class="our-services-block">
          <div class="row align-items-center">
-            <div class="col-lg-8">
+            <div class="col-lg-8 order-1">
                <div class="content">
                   {% if block.settings.heading != blank %}
                   <h2 class="h2">{{ block.settings.heading }}</h2>
@@ -46,7 +46,7 @@
                   {% endif %}
                </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 order-2"> 
                <div class="image">
                   {% if block.settings.logo-image != blank %}
                   <img src="{{ block.settings.logo-image | img_url : 'master' }}" class="img-fluid"

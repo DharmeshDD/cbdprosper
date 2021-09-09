@@ -19,9 +19,11 @@
 
     <div class="row">
       <div class="col-lg-8">
-        {% if section.settings.left-text != blank %}
-        <p>{{ section.settings.left-text }}</p>
-        {% endif %}
+        <div class="content">
+          {% if section.settings.left-text != blank %}
+          <p>{{ section.settings.left-text }}</p>
+          {% endif %}
+        </div>
 
       </div>
       <div class="col-lg-4">

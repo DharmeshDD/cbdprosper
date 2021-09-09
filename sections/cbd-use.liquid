@@ -12,29 +12,28 @@
       </div>
     </div>
   </div>
-  <div class="use-content">
-    <div class="container-fluid">
-      {% if section.blocks != blank %}
-      <div class="row">
-        {% for block in section.blocks %}
-        <div class="img-grid">
+  
+  <div class="container-fluid">
+    <div class="owl-carousel owl-theme use-content" id="cbd-use-slider" >
+  
+          {% for block in section.blocks %}
+          <div class="img-grid item">
 
-          {% if block.settings.image != blank %}
-          <img src="{{ block.settings.image | img_url:'master' }}" alt="{{ block.settings.heading-text }}">
-          {% endif %}
+            {% if block.settings.image != blank %}
+            <img src="{{ block.settings.image | img_url:'master' }}" alt="{{ block.settings.heading-text }}">
+            {% endif %}
 
-          {% if block.settings.heading-text != blank %}
-          <h3 class="text24">{{ block.settings.heading-text }}</h3>
-          {% endif %}
+            {% if block.settings.heading-text != blank %}
+            <h3 class="text24">{{ block.settings.heading-text }}</h3>
+            {% endif %}
 
-          {% if block.settings.desc-text != blank %}
-          <p>{{ block.settings.desc-text }}</p>
-          {% endif %}
+            {% if block.settings.desc-text != blank %}
+            <p>{{ block.settings.desc-text }}</p>
+            {% endif %}
 
-        </div>
-        {% endfor %}
-      </div>
-      {% endif %}
+          </div>
+          {% endfor %}
+      
     </div>
   </div>
 
