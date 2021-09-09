@@ -84,9 +84,8 @@ $('#customer-review').owlCarousel({
             stagePadding: 90
         },
         1366:{
-            items:1,
-            margin: 20,
-            stagePadding: 120
+            items:1,            
+            stagePadding: 150
         }
     }   
 });
@@ -126,6 +125,10 @@ $(".phoneno").click(function(){
     $(".contact-numbers").toggleClass('display');
  });
 });
+
+$(".navbar-toggler").click(function(){
+    $(".navbar-toggler").toggleClass('greenicon');    
+ });
 
 $(document).ready(function() {
 
