@@ -126,8 +126,8 @@ $('#cbd-use-slider').owlCarousel({
         992:{
             items:2
         },
-        1000:{
-            items:5
+        1100:{
+            items:3
         },
         1200:{
             items:5,
