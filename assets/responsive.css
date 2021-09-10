@@ -2243,6 +2243,13 @@
         margin: 98px 0 0 0;
     }
     /* Single Product End */
+  
+    .contact-loaction .title-white h2 {
+      font-size: 28px;
+    }
+    .contact-loaction .btn-custom {
+		padding: 8px 30px;
+    }
 }
 
 @media (min-width: 1440px) and (max-width: 1539.98px) {
