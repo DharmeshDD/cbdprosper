@@ -2476,3 +2476,7 @@ header.header .header-navbar .search-close-icon img {
 .search-open {
     overflow-x: hidden;
 }
+      
+      .footer-btm ul.footer__list-social li a img {
+      		max-width: 30px;
+      }
