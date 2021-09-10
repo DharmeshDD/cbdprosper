@@ -2941,7 +2941,7 @@ header.header .header-navbar .search-close-icon img {
       
       .header.header-fixed {
       	position: fixed;
-		top: 0;
+		top: 0 !important;
 		left: 0;
 		width: 100%;
 		z-index: 9999;
