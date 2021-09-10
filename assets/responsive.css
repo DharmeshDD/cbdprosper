@@ -265,6 +265,7 @@
     }
     .Home-slider .item .content.align-right {
         text-align: center;
+      	float: none;
     }
     .Home-slider .owl-dots button.active:before {
         top: -7px;
