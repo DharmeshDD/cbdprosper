@@ -10,7 +10,7 @@
            </a>            
            <div class="contact-numbers">
             {% for block in section.blocks %}
-             <a href=""><i class="fa fa-phone" aria-hidden="true"></i>{{ block.settings.name }}: <span>{{ block.settings.phno }}</span></a>
+             <a href="tel:{{ block.settings.phno }}"><i class="fa fa-phone" aria-hidden="true"></i>{{ block.settings.name }}: <span>{{ block.settings.phno }}</span></a>
              {% endfor %}
            </div>
          </div>
