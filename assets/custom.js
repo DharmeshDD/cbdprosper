@@ -95,8 +95,9 @@ $('#customer-review').owlCarousel({
             items:1,
             stagePadding: 90
         },
-        1000:{
-            items:1,            
+        1100:{
+            items:1,
+            stagePadding: 90           
         },
         1200:{
             items:1,
