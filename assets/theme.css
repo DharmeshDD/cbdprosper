@@ -2480,3 +2480,15 @@ header.header .header-navbar .search-close-icon img {
       .footer-btm ul.footer__list-social li a img {
       		max-width: 30px;
       }
+      
+      .newsletter-form__message {
+    color: #fff;
+    margin: 5px 0 0 0;
+    display: inline-block;
+}
+      
+      .newsletter-form__message svg {
+    width: 20px;
+    position: relative;
+    top: 5px;
+}
