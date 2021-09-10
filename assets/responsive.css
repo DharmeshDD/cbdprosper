@@ -431,7 +431,7 @@
         text-align: center;
     }
     .customer-review .owl-item .item .author-info {
-        text-align: center;
+        text-align: right;
     }
     .customer-review:after {
         background: url('../assets/best-seller-bg1.png');
