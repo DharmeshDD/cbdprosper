@@ -1360,6 +1360,9 @@
         right: 50px;
         top: 20%;
     }
+  .Home-slider .item .h1 {
+  	font-size: 45px!important;
+  }
     .header .navbar-collapse {
         top: 200px;
     }
