@@ -348,6 +348,9 @@
     .how-cbd-work .cbd-img img {
         max-width: 250px;
     }
+  .how-cbd-work {
+  	padding: 50px 0;
+  }
     .cbd-use .content {
         width: 100%;
     }
