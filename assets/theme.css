@@ -2929,3 +2929,7 @@ header.header .header-navbar .search-close-icon img {
     position: relative;
     top: 5px;
 }
+      .shopify-challenge__container {
+    margin-top: 150px;
+    margin-bottom: 60px;
+}
