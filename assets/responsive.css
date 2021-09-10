@@ -1764,6 +1764,9 @@
     .how-cbd-work .cbd-img img {
         max-width: 200px;
     }
+  .Home-slider .item .h1 {
+  	font-size: 50px!important;
+  }
     .about-cbd .inner-content {
         padding: 0;
     }
