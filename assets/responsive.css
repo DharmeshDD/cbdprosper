@@ -186,13 +186,15 @@
         right: 20px;
         z-index: 9999;
     }
+  .announcement .owl-nav {
+  	top: 50%;
+    transform: translateY(-50%);
+  }
     .announcement .owl-nav button.owl-prev span::before {
         left: 0;
-        top: 100%;
     }
     .announcement .owl-nav button.owl-next span::before {
         right: 0;
-        top: 100%;
     }
     .header .navbar-collapse {
         top: 225px;
