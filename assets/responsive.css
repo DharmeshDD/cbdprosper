@@ -189,6 +189,10 @@
   .header .navbar-collapse:before {
   	left: 13px!important;
   }
+  .header .header-navbar ul li a {
+  	font-size: 16px;
+    padding: 0 10px!important;
+  }
   .announcement .owl-nav {
   	top: 50%;
     transform: translateY(-50%);
