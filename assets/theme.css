@@ -2970,3 +2970,8 @@ header.header .header-navbar .search-close-icon img {
             transform:translateY(0)
         }
     }
+      
+      h2.form-status.caption-large {
+    color: #000;
+    font-size: 16px;
+}
