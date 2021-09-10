@@ -1758,6 +1758,9 @@
     .header .header-navbar .phoneno .contact-numbers {
         top: 77px;
     }
+  .header .navbar-collapse {
+  	top: 106px;
+  }
     .Home-slider .item {
         background-position: 50%;
     }
