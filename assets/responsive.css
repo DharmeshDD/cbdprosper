@@ -1739,6 +1739,11 @@
         -webkit-mask-size: 280px 280px;
     }
     /* Single Product End */
+  
+  .announcement .owl-nav {
+  	align-items: center;
+    height: 100%;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1111.98px) {
