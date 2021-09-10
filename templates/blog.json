@@ -4,14 +4,25 @@
       "type": "image-banner",
       "settings": {
         "bg-img": "shopify:\/\/shop_images\/bg.png",
-        "heading": ""
+        "heading": "What's Up?"
       }
     },
     "feature_blog": {
-      "type": "feature-blog"
+      "type": "feature-blog",
+      "settings": {
+        "title": "Blog posts",
+        "blog": "",
+        "blog_show_author": false,
+        "blog_show_date": true
+      }
     },
     "main": {
-      "type": "main-blog"
+      "type": "main-blog",
+      "settings": {
+        "show_image": true,
+        "show_date": true,
+        "show_author": false
+      }
     }
   },
   "order": [
@@ -19,5 +30,4 @@
     "feature_blog",
     "main"
   ]
-} 
- 
+}
