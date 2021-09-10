@@ -1682,6 +1682,9 @@ header.header .header-navbar .search-close-icon img {
     font-weight: 700;
     font-family: var(--globalfonts);
 }
+      .breadcrumb h2 {
+      	color: #fff;
+      }
 
 
 /***** Breadcrumb End *****/
