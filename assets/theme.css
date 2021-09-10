@@ -2924,11 +2924,16 @@ header.header .header-navbar .search-close-icon img {
     display: inline-block;
 }
 
-.newsletter-form__message svg, form__message svg {
+.newsletter-form__message svg  {
     width: 20px;
     position: relative;
     top: 5px;
 }
+      form__message svg {
+      	width: 20px;
+        position: relative;
+        top: 5px;
+      }
       .shopify-challenge__container {
     margin-top: 150px;
     margin-bottom: 60px;
