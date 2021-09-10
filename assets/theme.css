@@ -736,7 +736,7 @@ header.header .header-navbar .search-close-icon img {
     max-width: 1440px;
 }
 .Home-slider .item .h1 {
-    font-size: 75px;
+    font-size: 75px !important;
 }    
 .Home-slider .item .h4, .Home-slider .item .h1 {
     color: var(--white);
