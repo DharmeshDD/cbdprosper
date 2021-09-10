@@ -1685,6 +1685,7 @@ header.header .header-navbar .search-close-icon img {
       .breadcrumb h2 {
       	color: #fff;
         font-family: var(--globalfonts);
+          font-weight: 400;
       }
 
 
