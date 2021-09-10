@@ -1944,6 +1944,17 @@
         -webkit-mask-size: 350px 350px;
     }
     /* Single Product End */
+  
+  .bestseller-shop .bestseller-slider .item .best-product .product-details h5 {
+  	font-size: 18px;
+    line-height: 26px;
+  	}
+  .bestseller-shop .bestseller-slider .item .best-product .product-details .get-price h6 {
+  	font-size: 20px;
+  }
+  .bestseller-shop .bestseller-slider .item:hover:before {
+  	left: 0px;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1365.98px) {
