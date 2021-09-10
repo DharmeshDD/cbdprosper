@@ -815,6 +815,10 @@
         -webkit-mask-size: 280px 280px;
     }
     /* Single Product End */
+  
+  .how-cbd-work .content {
+  	margin: 10px 0;
+  }
 }
 
 @media (min-width: 640px) and (max-width: 767.98px) {    
