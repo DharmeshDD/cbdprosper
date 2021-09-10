@@ -38,7 +38,7 @@
         </div>
         <div class="col-lg-2">
           {% if section.settings.button_label != blank %}
-          <a href="{{ section.settings.button_link }}" target="_blank"  class='btn-black btn-custom'><span>{{
+          <a href="{{ section.settings.button_link }}" class='btn-black btn-custom'><span>{{
               section.settings.button_label }}</span></a>
           {% endif %}
         </div>
@@ -211,7 +211,7 @@
             <div class="footer__copyright caption">
               <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url
                 }}</small>
-              <a href="https://techyscouts.com/" class="techyscouts-credit-link">
+              <a href="https://techyscouts.com/" target="_blank" class="techyscouts-credit-link">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 0 3700 552" id="techyscouts-logo"
                   aria-labelledby="techyscouts-logo-title" role="img">
                   <title id="techyscouts-logo-title">Made with love by TechyScouts</title>
