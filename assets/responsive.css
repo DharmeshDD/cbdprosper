@@ -2384,6 +2384,19 @@
         margin: 100px 0 0 0;
     }
     /* Single Product End */
+  
+  	.contact-loaction .title-white h2 {
+      font-size: 28px;
+    }
+    .contact-loaction .btn-custom {
+		padding: 8px 30px;
+    }
+    .newsletter .logo-head .heading h2 {
+		font-size: 34px;
+    }
+    .newsletter .logo-head .heading h3 {
+		font-size: 22px;
+    }
 }
 
 @media (min-width: 1550px) and (max-width: 1749.98px) {
