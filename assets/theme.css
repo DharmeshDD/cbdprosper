@@ -191,7 +191,7 @@ p {
     text-transform: uppercase;
     font-size: var(--text18);
     font-weight: 700;
-    padding: 8px 50px;
+    padding: 10px 50px;
     border-radius: 0;
     display: inline-block;
     text-decoration: none;

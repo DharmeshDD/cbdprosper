@@ -18,7 +18,7 @@ $('#announcement-bar').owlCarousel({
 
 $('#home-slider').owlCarousel({
     loop:true,
-    margin:10,
+    margin:0,
     nav:true,
     responsive:{
         0:{
