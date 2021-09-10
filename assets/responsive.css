@@ -2250,6 +2250,12 @@
     .contact-loaction .btn-custom {
 		padding: 8px 30px;
     }
+    .newsletter .logo-head .heading h2 {
+		font-size: 34px;
+    }
+    .newsletter .logo-head .heading h3 {
+		font-size: 22px;
+    }
 }
 
 @media (min-width: 1440px) and (max-width: 1539.98px) {
