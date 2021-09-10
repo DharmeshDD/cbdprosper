@@ -186,6 +186,9 @@
         right: 20px;
         z-index: 9999;
     }
+  .header.header-fixed {
+  	padding: 10px 0 !important;
+  }
   .header .navbar-collapse:before {
   	left: 13px!important;
   }
