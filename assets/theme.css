@@ -754,7 +754,7 @@ header.header .header-navbar .search-close-icon img {
     margin: 30px 0 0 0;
 }
 .Home-slider .item .content.align-right {
-    text-align: right;
+    float: right;
 }
 .Home-slider .item .content.align-right h4 {
     max-width: inherit;
