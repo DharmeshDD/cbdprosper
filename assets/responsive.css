@@ -95,7 +95,7 @@
         margin: 4px 0 0 0;
     }
     .header .navbar-collapse {
-        position: fixed;
+        position: absolute;
         left: 0;
         top: 210px;
         background: var(--darkgreen);
@@ -197,7 +197,7 @@
         right: 0;
     }
     .header .navbar-collapse {
-        top: 225px;
+        top: 65px;
     }
     header.header .header-navbar .search.float-right .search-icon a img,
     .header .header-navbar .phoneno img {
