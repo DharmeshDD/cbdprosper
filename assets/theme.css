@@ -689,7 +689,7 @@ header.header .header-navbar .search.float-right.active form {
 header.header .header-navbar .search.float-right form.navbar-form {
     position: absolute;
     right: -20px;
-    bottom: -92px;
+    bottom: -82px;
     width: 25%;
     display: none;
 }
