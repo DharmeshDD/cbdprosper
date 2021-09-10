@@ -914,6 +914,7 @@
     }
     .Home-slider .item .content.align-right {
         text-align: center;
+      	float: none;
     }
     .Home-slider .item .h4,
     .Home-slider .item .h1 {
