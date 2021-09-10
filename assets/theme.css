@@ -1755,6 +1755,7 @@ header.header .header-navbar .search-close-icon img {
     font-weight: 700;
     text-decoration: none;
     border-radius: 0;
+      -webkit-appearance: inherit;
 }
 
 .faq-accordian .accordion .card-body {
