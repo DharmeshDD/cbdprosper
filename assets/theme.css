@@ -2946,8 +2946,8 @@ header.header .header-navbar .search-close-icon img {
 		width: 100%;
 		z-index: 9999;
 		padding: 0px; 
-		animation-name: stickySlideDown;
-		animation-duration: .5s;
+/* 		animation-name: stickySlideDown;
+		animation-duration: .5s; */
 		transition: .5s;
 		border-top: none;
       }
