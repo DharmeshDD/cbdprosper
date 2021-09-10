@@ -244,6 +244,7 @@
     }
     header.header .header-navbar .search.float-right form.navbar-form {
         bottom: -98px;
+      	z-index: 99;
     }
     .Home-slider .item {
         background: none !important;
