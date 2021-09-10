@@ -2111,9 +2111,12 @@
     .header .navbar-brand {
         margin: 0 10px !important; 
     }
-  .header .header-navbar ul li a {
-  	font-size: 16px;
-  }
+    .header .header-navbar ul li a {
+      font-size: 16px;
+    }
+  	.header .header-navbar .phoneno img, header.header .header-navbar .search.float-right .search-icon a img {
+    	width: 20px;
+    }
     .Home-slider .item {
         height: 750px;
     }    
