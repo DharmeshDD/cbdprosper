@@ -1378,6 +1378,7 @@
     }
     .Home-slider .item {
         background-position: 50%;
+          height: 720px;
     }
     .how-cbd-work .cbd-img img {
         max-width: 500px;
