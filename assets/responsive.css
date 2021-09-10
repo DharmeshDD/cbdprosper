@@ -1955,6 +1955,9 @@
   .bestseller-shop .bestseller-slider .item:hover:before {
   	left: 0px;
   }
+  .bestseller-shop .bestseller-slider .item .best-product .product-details {
+  	margin: 0px;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1365.98px) {
