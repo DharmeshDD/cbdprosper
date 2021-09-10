@@ -763,7 +763,7 @@ header.header .header-navbar .search.float-right .inputSearch.active {
     background: url('../assets/search-black.svg');
     background-repeat: no-repeat;
     background-position: left center;
-    background-size: 25px;
+    background-size: 20px;
 }
 
 header.header .header-navbar .search.float-right .search-close-icon {
