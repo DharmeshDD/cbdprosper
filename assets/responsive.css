@@ -538,6 +538,7 @@
     .footer-btm .footer__copyright small.copyright__content {
         padding: 15px 0 10px;
         display: inline-block;
+      	width: 100%;
     }
     .footer-btm ul.footer__list-social li {
         margin: 0 20px;
