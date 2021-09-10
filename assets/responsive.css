@@ -917,7 +917,7 @@
     }
     .Home-slider .item .h4,
     .Home-slider .item .h1 {
-        font-size: 30px;
+        font-size: 30px !important;
         margin: 0 auto;
     }
     .Home-slider .item .container {
