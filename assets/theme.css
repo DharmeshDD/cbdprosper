@@ -2986,3 +2986,8 @@ header.header .header-navbar .search-close-icon img {
       ul.form-status-list.caption-large li a {
       	color: #000;
       }
+      
+      .form-status.form-status-list.form__message {
+    color: #428445;
+    margin: 0 0 10px 0;
+}
