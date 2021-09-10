@@ -122,6 +122,7 @@
             "type": "select",
             "settings": {
               "slider-image": "shopify:\/\/shop_images\/slider2.jpg",
+              "slider-image-mobile": "shopify:\/\/shop_images\/mobile-slider2.jpg",
               "layout": "right",
               "heading-text": "Meet Our",
               "subheading-text": "CBD Plus USA <br> Guides!",
@@ -133,29 +134,19 @@
             "type": "select",
             "settings": {
               "slider-image": "shopify:\/\/shop_images\/slider3.jpg",
+              "slider-image-mobile": "shopify:\/\/shop_images\/mobile-slider3.jpg",
               "layout": "left",
               "heading-text": "",
               "subheading-text": "Live Your Best Life!",
               "linktext": "FAQs",
               "link": "shopify:\/\/pages\/faq"
             }
-          },
-          "c3c01c2d-61d1-4a44-ae19-330f17712836": {
-            "type": "select",
-            "settings": {
-              "layout": "right",
-              "heading-text": "",
-              "subheading-text": "",
-              "linktext": "",
-              "link": ""
-            }
           }
         },
         "block_order": [
           "05a572ff-66c3-452a-aad0-23a9f2aa0d00",
           "5dce63dd-70c6-47d1-b23a-26435e70ca31",
-          "055d68f0-a230-4cdb-90c9-5b2e4d9c57ff",
-          "c3c01c2d-61d1-4a44-ae19-330f17712836"
+          "055d68f0-a230-4cdb-90c9-5b2e4d9c57ff"
         ],
         "settings": {
         }
