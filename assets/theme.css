@@ -1772,7 +1772,7 @@ header.header .header-navbar .search-close-icon img {
     font: normal normal normal 14px/1 FontAwesome;
     font-size: 18px;
     position: absolute;
-    top: 38px;
+    top: 34px;
     -webkit-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
