@@ -1,4 +1,21 @@
 $( document ).ready(function() {
+
+  /*Sticky Header*/
+var wh = $(window).height();
+var dh = $(document).height();
+var hh = $('.header').height();
+if(dh > (parseInt(wh) + (parseInt(hh) * 2) )) {
+    $(window).on("scroll", function(){
+        if ($(window).scrollTop() >= 150) {
+            $('.header').addClass('header-fixed');
+        }
+        else {
+            $('.header').removeClass('header-fixed');
+        }
+    });
+}
+/*Sticky Header*/
+  
 $('#announcement-bar').owlCarousel({
     loop:true,
     margin:10,
