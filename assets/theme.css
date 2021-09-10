@@ -2918,13 +2918,13 @@ header.header .header-navbar .search-close-icon img {
     max-width: 30px;
 }
 
-.newsletter-form__message {
+.newsletter-form__message, .form__message {
     color: #fff;
     margin: 5px 0 0 0;
     display: inline-block;
 }
 
-.newsletter-form__message svg {
+.newsletter-form__message svg, form__message svg {
     width: 20px;
     position: relative;
     top: 5px;
