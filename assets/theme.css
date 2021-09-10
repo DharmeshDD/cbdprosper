@@ -2935,7 +2935,7 @@ header.header .header-navbar .search-close-icon img {
     position: relative;
     top: 5px;
 }
-      form__message svg {
+      .form__message svg {
       	width: 20px;
         position: relative;
         top: 5px;
