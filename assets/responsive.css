@@ -2282,6 +2282,9 @@
     .Home-slider .item .container {
         max-width: 1240px;
     }
+    .Home-slider .item .h1 {
+		font-size: 55px !important;
+    }
     .about-cbd {
         background-position: 70% 100%;
     }
