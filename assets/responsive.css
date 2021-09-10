@@ -2258,6 +2258,9 @@
     }
 
     /* Home Page Start */
+    .header .header-navbar .phoneno img, header.header .header-navbar .search.float-right .search-icon a img {
+      width: 20px;
+    }
     .header .navbar-brand {
         margin: 0 10px;
     }
