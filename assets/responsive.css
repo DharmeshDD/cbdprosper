@@ -467,6 +467,7 @@
     .service {
         padding: 100px 0 50px;
         background-position: center;
+      	background: url('../assets/services-mobile-bg.jpg')
     }
     .service .services-block .content .text24 {
         font-size: 18px;
