@@ -2938,3 +2938,25 @@ header.header .header-navbar .search-close-icon img {
     margin-top: 150px;
     margin-bottom: 60px;
 }
+      
+      .header.header-fixed {
+      	position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 9999;
+		padding: 0px; 
+		animation-name: stickySlideDown;
+		animation-duration: .5s;
+		transition: .5s;
+		border-top: none;
+      }
+      @keyframes stickySlideDown{
+        0%{
+            opacity:.7;
+            transform:translateY(-100%)}
+        to{
+            opacity:1;
+            transform:translateY(0)
+        }
+    }
