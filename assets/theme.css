@@ -2631,7 +2631,7 @@ header.header .header-navbar .search-close-icon img {
     width: 26px;
     height: 26px;
     display: inline-block;
-    margin: 12px 0 0 0;
+    margin: 12px 0 0 -10px;
 }
 
 .single-product #sync1 .owl-nav button.owl-next {
@@ -2642,7 +2642,7 @@ header.header .header-navbar .search-close-icon img {
     width: 26px;
     height: 26px;
     display: inline-block;
-    margin: 12px 0 0 0;
+    margin: 12px -10px 0 0;
 }
 
 .single-product #sync2 {
