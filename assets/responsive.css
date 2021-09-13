@@ -2308,12 +2308,7 @@
     .newsletter .logo-head .heading h3 {
         font-size: 22px;
     }
-    .single-product #sync1 .owl-nav button.owl-next {
-		margin: 12px -10px 0 0;
-    }
-    .single-product #sync1 .owl-nav button.owl-prev {
-		margin: 12px 0 0 -10px;
-    }
+    
 }
 
 @media (min-width: 1440px) and (max-width: 1539.98px) {
