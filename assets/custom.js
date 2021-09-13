@@ -67,6 +67,9 @@ $('#shop-bestseller').owlCarousel({
         1000:{
             items:3
         },
+      	1366:{
+            items:4
+        },
       	3000:{
             items:4
         }
