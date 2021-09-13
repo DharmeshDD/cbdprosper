@@ -2239,6 +2239,7 @@
     .bestseller-shop .bestseller-slider .item:hover:before {
         width: 200px;
         left: 50px;
+      	top: 0px;
     }
     /* Home Page End */
     /* Contact Start */
