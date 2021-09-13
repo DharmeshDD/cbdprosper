@@ -580,7 +580,7 @@ p {
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 9;
+    z-index: 99;
     padding: 20px 0;
     background: rgba(61, 61, 61, 0.65);
 }
