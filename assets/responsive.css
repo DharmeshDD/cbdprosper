@@ -1959,7 +1959,7 @@
   	font-size: 20px;
   }
   .bestseller-shop .bestseller-slider .item:hover:before {
-  	left: 0px;
+  	left: 40px;
   }
   .bestseller-shop .bestseller-slider .item .best-product .product-details {
   	margin: 0px;
