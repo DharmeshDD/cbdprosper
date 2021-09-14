@@ -2364,7 +2364,7 @@
         padding-left: 60px;
     }
     .bestseller-shop .bestseller-slider .item:hover:before {
-        left: 20px;
+        left: 0px;
         top: 10px;
     }
     .bestseller-shop .bestseller-slider .item .best-product .product-details h5 {
