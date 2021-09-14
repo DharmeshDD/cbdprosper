@@ -993,8 +993,8 @@ header.header .header-navbar .search-close-icon img {
 .bestseller-shop .bestseller-slider .item:hover:before {
     content: "";
     position: absolute;
-    top: 50px;
-    left: 70px;
+    top: 0px;
+    left: 30px;
     width: 260px;
     height: 260px;
     background: url('../assets/product-hover.png');
