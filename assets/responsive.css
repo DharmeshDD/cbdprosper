@@ -319,10 +319,10 @@
         line-height: 28px;
     }
     .bestseller-shop .bestseller-slider .item:hover:before {
-        top: 30px;
-        left: 60px;
-        width: 160px;
-        height: 160px;
+        top: 0;
+        left: 10px;
+        width: 200px;
+        height: 200px;
     }
     .bestseller-shop:before {
         width: 300px;
