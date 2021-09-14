@@ -2037,10 +2037,10 @@
         height: 250px;
     }
     .bestseller-shop .bestseller-slider .item:hover:before {
-        top: 20px;
-        left: 30px;
-        width: 220px;
-        height: 220px;
+        top: 0;
+        left: 40px;
+        width: 250px;
+        height: 250px;
     }
     .bestseller-shop .bestseller-slider .item .best-product .product-details h5 {
         font-size: 20px;
